@@ -2,10 +2,25 @@ import React from 'react';
 import { render } from 'react-dom';
 import Home from './Home/index';
 import './style.css';
+import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
+import Play from './Play/index';
+import Learn from './Learn';
 
 const App = () => (
   <>
-    <Home />;
+    <Router>
+      <Switch>
+        <Route path="/learn">
+          <Learn />
+        </Route>
+        <Route path="/play">
+          <Play />
+        </Route>
+        <Route path="/">
+          <Home />
+        </Route>
+      </Switch>
+    </Router>
   </>
 );
 render(<App />, document.querySelector('#app'));

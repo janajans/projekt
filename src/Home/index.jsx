@@ -9,27 +9,13 @@ import Learn from '../Learn';
 const Home = () => {
   return (
     <>
-      <Router>
-        <Link to="/learn">
-          <img src={learnPicture} alt="ikonka učit se" />
-        </Link>
-        <Link to="/play">
-          <img src={playPicture} alt="ikonka hrát si" />
-        </Link>
-        <p>Jsem domovská stránka</p>
-        <main>
-          {/* A <Switch> looks through its children <Route>s and
-      renders the first one that matches the current URL. */}
-          <Switch>
-            <Route path="/learn">
-              <Learn />
-            </Route>
-            <Route path="/play">
-              <Play />
-            </Route>
-          </Switch>
-        </main>
-      </Router>
+      <Link to="/learn">
+        <img src={learnPicture} alt="ikonka učit se" />
+      </Link>
+      <Link to="/play">
+        <img src={playPicture} alt="ikonka hrát si" />
+      </Link>
+      <p>Jsem domovská stránka</p>
     </>
   );
 };
