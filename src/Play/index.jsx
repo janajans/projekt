@@ -6,11 +6,11 @@ import bus from './img/autobus.png';
 
 const Play = () => {
   return (
-    <div class="container">
+    <div className="container">
       <main>
         <img id="autobus" src={bus} alt="obrázek autobus" />
       </main>
-      <div class="row">
+      <div className="row">
         <img src={letterA} alt="písmeno A" />
         <img src={letterB} alt="písmeno B" />
         <img src={letterC} alt="písmeno C" />

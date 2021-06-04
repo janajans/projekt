@@ -1,5 +1,6 @@
 import React from 'react';
 import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
+import Header_short from '../Header_short';
 import learnPicture from '../img/poketacek-learn.svg';
 import playPicture from '../img/poketacek-play.svg';
 import './style.css';
@@ -7,6 +8,7 @@ import './style.css';
 const Home = () => {
   return (
     <>
+      <Header_short />
       <Link to="/learn">
         <img id="poketacek-learn" src={learnPicture} alt="ikonka učit se" />
       </Link>

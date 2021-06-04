@@ -1,0 +1,8 @@
+.container--learn {
+  display: flex;
+  justify-content: center;
+}
+
+#bus {
+  width: 20%;
+}
