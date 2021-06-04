@@ -2,3 +2,8 @@
 #poketacek-play {
   width: 40vmin;
 }
+
+.container--home {
+  display: flex;
+  justify-content: center;
+}
