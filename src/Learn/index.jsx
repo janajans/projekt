@@ -1,6 +1,7 @@
 import React from 'react';
+import bus from './img/autobus.png';
 
-const Learn = () => <p>Jsem sekce s učením se</p>;
+const Learn = () => <img id="bus" src={bus} alt="picture of a bus" />;
 
 export default Learn;
 
