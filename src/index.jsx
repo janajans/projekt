@@ -5,6 +5,7 @@ import './style.css';
 import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
 import Play from './Play/index';
 import Learn from './Learn';
+import Footer from './Footer';
 
 const App = () => (
   <>
@@ -21,6 +22,7 @@ const App = () => (
         </Route>
       </Switch>
     </Router>
+    <Footer />
   </>
 );
 render(<App />, document.querySelector('#app'));

@@ -15,9 +15,10 @@ const Home = () => {
       <Link to="/play">
         <img src={playPicture} alt="ikonka hrát si" />
       </Link>
-      <p>Jsem domovská stránka</p>
     </>
   );
 };
 
 export default Home;
+
+// //  <Header><Zvuk><OdkazNaHome><Restart onRestart={handleRestart}></Header>
