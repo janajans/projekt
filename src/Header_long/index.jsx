@@ -8,10 +8,14 @@ import './style.css';
 const Header_long = () => (
   <>
     <header>
-      <Icon_Poketacek />
-      <Icon_Sound />
-      <Icon_Restart />
-      <Icon_Home />
+      <div className="header--left">
+        <Icon_Poketacek />
+      </div>
+      <div className="header--right">
+        <Icon_Sound />
+        <Icon_Restart />
+        <Icon_Home />
+      </div>
     </header>
     ;
   </>
