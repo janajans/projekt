@@ -22,7 +22,7 @@ const Learn = () => {
         />
         {showLetter && (
           <img
-            className="slide-in-left"
+            className="learning-image slide-in-left"
             src={letterObjects[randomIndex].letter.uppercase}
             alt=""
           />
