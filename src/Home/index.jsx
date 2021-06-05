@@ -1,8 +1,8 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import Header_short from '../Header_short';
-import learnPicture from '../img/poketacek-learn.svg';
-import playPicture from '../img/poketacek-play.svg';
+import learnPicture from './img/poketacek-learn.svg';
+import playPicture from './img/poketacek-play.svg';
 import './style.css';
 
 const Home = () => {
