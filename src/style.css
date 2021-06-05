@@ -3,26 +3,9 @@
   font-family: 'Roboto', sans-serif;
 }
 
-.container {
-  /* position: fixed;
-  top: 35%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  /*https://css-tricks.com/centering-css-complete-guid* */
-  margin: auto;
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-}
-
 main {
   width: 100%;
   display: flex;
   justify-content: center;
   margin-bottom: 5%;
-}
-
-#autobus {
-  align-items: center;
-  width: 20vmin;
 }
