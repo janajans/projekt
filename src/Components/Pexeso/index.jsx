@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import letterObjects from '../../letterObjects';
 import { randomIndexesGenerator } from '../../Util/randomIndexGenerator';
 import './style.css';
+import { shuffledIndexes } from '../../Util/arrayShuffler';
 
 const Pexeso = () => {
   const [randomIndexes] = useState(randomIndexesGenerator(3));
@@ -19,7 +20,7 @@ const Pexeso = () => {
           ))}
         </div>
         <div className="pexeso-letters">
-          {randomIndexes.map((index) => (
+          {shuffledIndexes(randomIndexes).map((index) => (
             <img
               className="pexeso-item"
               src={letterObjects[index].letter.uppercase}
