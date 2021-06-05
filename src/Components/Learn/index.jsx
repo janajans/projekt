@@ -1,14 +1,35 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './style.css';
-import bus from './img/autobus.png';
+import letterObjects from '../../letterObjects.js';
 
-const Learn = () => (
-  <>
-    <div className="container--learn">
-      <img id="bus" src={bus} alt="picture of a bus" />
-    </div>
-  </>
-);
+const Learn = () => {
+  const [showLetter, setShowLetter] = useState(false);
+  const [randomIndex] = useState(
+    Math.floor(Math.random() * letterObjects.length),
+  );
+
+  return (
+    <>
+      <div className="container-learning">
+        <img
+          className="learning-image"
+          src={letterObjects[randomIndex].picture.image}
+          alt=""
+          onClick={() => {
+            setShowLetter((value) => !value);
+          }}
+        />
+        {showLetter && (
+          <img
+            className="slide-in-left"
+            src={letterObjects[randomIndex].letter.uppercase}
+            alt=""
+          />
+        )}
+      </div>
+    </>
+  );
+};
 
 export default Learn;
 
