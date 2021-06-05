@@ -16,6 +16,7 @@ const Pexeso = () => {
               className="pexeso-item"
               src={letterObjects[index].picture.image}
               alt=""
+              key={index}
             />
           ))}
         </div>
@@ -25,6 +26,7 @@ const Pexeso = () => {
               className="pexeso-item"
               src={letterObjects[index].letter.uppercase}
               alt=""
+              key={index}
             />
           ))}
         </div>
