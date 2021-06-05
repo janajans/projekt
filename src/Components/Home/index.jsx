@@ -15,6 +15,9 @@ const Home = () => {
         <Link to="/dragdrop">
           <img id="poketacek-play" src={playPicture} alt="ikonka hrát si" />
         </Link>
+        <Link to="/pexeso">
+          <img id="poketacek-play" src={playPicture} alt="ikonka hrát si" />
+        </Link>
       </div>
     </>
   );
