@@ -6,12 +6,16 @@ import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
 // import Play from './Play/index';
 import DragAndDrop from './Components/DragAndDrop/index';
 import Learn from './Components/Learn';
-import Footer from './Components/Footer';
+// import Footer from './Components/Footer';
 import Home from './Components/Home';
+import SoundProvider from './Providers/SoundContext';
+import Header from './Components/HeaderComponents/Header';
+import Pexeso from './Components/Pexeso';
 
 const App = () => (
-  <>
+  <SoundProvider>
     <Router>
+      <Header />
       <Switch>
         <Route path="/learn">
           <Learn />
@@ -19,12 +23,15 @@ const App = () => (
         <Route path="/dragdrop">
           <DragAndDrop />
         </Route>
+        <Route path="/pexeso">
+          <Pexeso />
+        </Route>
         <Route path="/">
           <Home />
         </Route>
       </Switch>
     </Router>
-    <Footer />
-  </>
+    {/* <Footer /> */}
+  </SoundProvider>
 );
 render(<App />, document.querySelector('#app'));
