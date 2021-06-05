@@ -1,6 +1,6 @@
-export const randomIndexesGenerator = (i) => {
-  const index1 = Math.floor(Math.random() * letterObjects.length);
+import letterObjects from '../letterObjects.js';
 
+export const randomIndexesGenerator = (i) => {
   const arrayOfIndexes = [];
 
   while (arrayOfIndexes.length < i) {
