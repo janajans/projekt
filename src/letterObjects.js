@@ -13,7 +13,7 @@ const letterObjects = [
     letter: {
       lowercase: './assets/letters/b-lowercase.svg',
       uppercase: './assets/letters/b-uppercase.svg',
-      sound,
+      sound: '',
     },
     picture: { image: './assets/images/buben.svg', sound: '' },
   },
@@ -22,7 +22,7 @@ const letterObjects = [
     letter: {
       lowercase: './assets/letters/c-lowercase.svg',
       uppercase: './assets/letters/c-uppercase.svg',
-      sound,
+      sound: '',
     },
     picture: { image: './assets/images/cirkus.svg', sound: '' },
   },
@@ -31,7 +31,7 @@ const letterObjects = [
     letter: {
       lowercase: './assets/letters/cc-lowercase.svg',
       uppercase: './assets/letters/cc-uppercase.svg',
-      sound,
+      sound: '',
     },
     picture: { image: './assets/images/cepice.svg', sound: '' },
   },
@@ -40,7 +40,7 @@ const letterObjects = [
     letter: {
       lowercase: './assets/letters/d-lowercase.svg',
       uppercase: './assets/letters/d-uppercase.svg',
-      sound,
+      sound: '',
     },
     picture: { image: './assets/images/dort.svg', sound: '' },
   },
@@ -49,7 +49,7 @@ const letterObjects = [
     letter: {
       lowercase: './assets/letters/dd-lowercase.svg',
       uppercase: './assets/letters/dd-uppercase.svg',
-      sound,
+      sound: '',
     },
     picture: { image: './assets/images/dabel.svg', sound: '' },
   },
@@ -58,7 +58,7 @@ const letterObjects = [
     letter: {
       lowercase: './assets/letters/e-lowercase.svg',
       uppercase: './assets/letters/e-uppercase.svg',
-      sound,
+      sound: '',
     },
     picture: { image: './assets/images/erb.svg', sound: '' },
   },
@@ -67,7 +67,7 @@ const letterObjects = [
     letter: {
       lowercase: './assets/letters/f-lowercase.svg',
       uppercase: './assets/letters/f-uppercase.svg',
-      sound,
+      sound: '',
     },
     picture: { image: './assets/images/fletna.svg', sound: '' },
   },
@@ -76,7 +76,7 @@ const letterObjects = [
     letter: {
       lowercase: './assets/letters/g-lowercase.svg',
       uppercase: './assets/letters/g-uppercase.svg',
-      sound,
+      sound: '',
     },
     picture: { image: './assets/images/gorila.svg', sound: '' },
   },
@@ -85,7 +85,7 @@ const letterObjects = [
     letter: {
       lowercase: './assets/letters/h-lowercase.svg',
       uppercase: './assets/letters/h-uppercase.svg',
-      sound,
+      sound: '',
     },
     picture: { image: './assets/images/hodiny.svg', sound: '' },
   },
@@ -94,7 +94,7 @@ const letterObjects = [
     letter: {
       lowercase: './assets/letters/ch-lowercase.svg',
       uppercase: './assets/letters/ch-uppercase.svg',
-      sound,
+      sound: '',
     },
     picture: { image: './assets/images/chleba.svg', sound: '' },
   },
@@ -103,7 +103,7 @@ const letterObjects = [
     letter: {
       lowercase: './assets/letters/i-lowercase.svg',
       uppercase: './assets/letters/i-uppercase.svg',
-      sound,
+      sound: '',
     },
     picture: { image: './assets/images/iglu.svg', sound: '' },
   },
@@ -112,7 +112,7 @@ const letterObjects = [
     letter: {
       lowercase: './assets/letters/j-lowercase.svg',
       uppercase: './assets/letters/j-uppercase.svg',
-      sound,
+      sound: '',
     },
     picture: { image: './assets/images/jablko.svg', sound: '' },
   },
@@ -121,7 +121,7 @@ const letterObjects = [
     letter: {
       lowercase: './assets/letters/k-lowercase.svg',
       uppercase: './assets/letters/k-uppercase.svg',
-      sound,
+      sound: '',
     },
     picture: { image: './assets/images/kasparek.svg', sound: '' },
   },
@@ -130,7 +130,7 @@ const letterObjects = [
     letter: {
       lowercase: './assets/letters/l-lowercase.svg',
       uppercase: './assets/letters/l-uppercase.svg',
-      sound,
+      sound: '',
     },
     picture: { image: './assets/images/lodicka.svg', sound: '' },
   },
@@ -139,7 +139,7 @@ const letterObjects = [
     letter: {
       lowercase: './assets/letters/m-lowercase.svg',
       uppercase: './assets/letters/m-uppercase.svg',
-      sound,
+      sound: '',
     },
     picture: { image: './assets/images/motyl.svg', sound: '' },
   },
@@ -148,7 +148,7 @@ const letterObjects = [
     letter: {
       lowercase: './assets/letters/n-lowercase.svg',
       uppercase: './assets/letters/n-uppercase.svg',
-      sound,
+      sound: '',
     },
     picture: { image: './assets/images/noty.svg', sound: '' },
   },
@@ -157,7 +157,7 @@ const letterObjects = [
     letter: {
       lowercase: './assets/letters/nn-lowercase.svg',
       uppercase: './assets/letters/nn-uppercase.svg',
-      sound,
+      sound: '',
     },
     picture: { image: './assets/images/nuf.svg', sound: '' },
   },
@@ -166,7 +166,7 @@ const letterObjects = [
     letter: {
       lowercase: './assets/letters/o-lowercase.svg',
       uppercase: './assets/letters/o-uppercase.svg',
-      sound,
+      sound: '',
     },
     picture: { image: './assets/images/oko.svg', sound: '' },
   },
@@ -175,7 +175,7 @@ const letterObjects = [
     letter: {
       lowercase: './assets/letters/p-lowercase.svg',
       uppercase: './assets/letters/p-uppercase.svg',
-      sound,
+      sound: '',
     },
     picture: { image: './assets/images/pero.svg', sound: '' },
   },
@@ -184,7 +184,7 @@ const letterObjects = [
     letter: {
       lowercase: './assets/letters/r-lowercase.svg',
       uppercase: './assets/letters/r-uppercase.svg',
-      sound,
+      sound: '',
     },
     picture: { image: './assets/images/raketa.svg', sound: '' },
   },
@@ -193,7 +193,7 @@ const letterObjects = [
     letter: {
       lowercase: './assets/letters/rr-lowercase.svg',
       uppercase: './assets/letters/rr-uppercase.svg',
-      sound,
+      sound: '',
     },
     picture: { image: './assets/images/redkvicka.svg', sound: '' },
   },
@@ -202,7 +202,7 @@ const letterObjects = [
     letter: {
       lowercase: './assets/letters/s-lowercase.svg',
       uppercase: './assets/letters/s-uppercase.svg',
-      sound,
+      sound: '',
     },
     picture: { image: './assets/images/slon.svg', sound: '' },
   },
@@ -211,7 +211,7 @@ const letterObjects = [
     letter: {
       lowercase: './assets/letters/ss-lowercase.svg',
       uppercase: './assets/letters/ss-uppercase.svg',
-      sound,
+      sound: '',
     },
     picture: { image: './assets/images/sala.svg', sound: '' },
   },
@@ -220,7 +220,7 @@ const letterObjects = [
     letter: {
       lowercase: './assets/letters/t-lowercase.svg',
       uppercase: './assets/letters/t-uppercase.svg',
-      sound,
+      sound: '',
     },
     picture: { image: './assets/images/tulipan.svg', sound: '' },
   },
@@ -229,7 +229,7 @@ const letterObjects = [
     letter: {
       lowercase: './assets/letters/tt-lowercase.svg',
       uppercase: './assets/letters/tt-uppercase.svg',
-      sound,
+      sound: '',
     },
     picture: { image: './assets/images/tuhyk.svg', sound: '' },
   },
@@ -238,7 +238,7 @@ const letterObjects = [
     letter: {
       lowercase: './assets/letters/u-lowercase.svg',
       uppercase: './assets/letters/u-uppercase.svg',
-      sound,
+      sound: '',
     },
     picture: { image: './assets/images/upir.svg', sound: '' },
   },
@@ -247,7 +247,7 @@ const letterObjects = [
     letter: {
       lowercase: './assets/letters/v-lowercase.svg',
       uppercase: './assets/letters/v-uppercase.svg',
-      sound,
+      sound: '',
     },
     picture: { image: './assets/images/veverka.svg', sound: '' },
   },
@@ -256,7 +256,7 @@ const letterObjects = [
     letter: {
       lowercase: './assets/letters/w-lowercase.svg',
       uppercase: './assets/letters/w-uppercase.svg',
-      sound,
+      sound: '',
     },
     picture: { image: './assets/images/wendy.svg', sound: '' },
   },
@@ -265,7 +265,7 @@ const letterObjects = [
     letter: {
       lowercase: './assets/letters/x-lowercase.svg',
       uppercase: './assets/letters/x-uppercase.svg',
-      sound,
+      sound: '',
     },
     picture: { image: './assets/images/xylofon.svg', sound: '' },
   },
@@ -274,7 +274,7 @@ const letterObjects = [
     letter: {
       lowercase: './assets/letters/y-lowercase.svg',
       uppercase: './assets/letters/y-uppercase.svg',
-      sound,
+      sound: '',
     },
     picture: { image: './assets/images/yetti.svg', sound: '' },
   },
@@ -283,7 +283,7 @@ const letterObjects = [
     letter: {
       lowercase: './assets/letters/z-lowercase.svg',
       uppercase: './assets/letters/z-uppercase.svg',
-      sound,
+      sound: '',
     },
     picture: { image: './assets/images/zmrzlina.svg', sound: '' },
   },
@@ -292,7 +292,7 @@ const letterObjects = [
     letter: {
       lowercase: './assets/letters/zz-lowercase.svg',
       uppercase: './assets/letters/zz-uppercase.svg',
-      sound,
+      sound: '',
     },
     picture: { image: './assets/images/zalud.svg', sound: '' },
   },
