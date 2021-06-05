@@ -8,7 +8,7 @@ import Learn from './Components/Learn';
 import Footer from './Components/Footer';
 import Home from './Components/Home';
 import SoundProvider from './Providers/SoundContext';
-import Header from './Components/Header/Header';
+import Header from './Components/HeaderComponents/Header';
 
 const App = () => (
   <SoundProvider>
