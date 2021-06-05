@@ -1,7 +1,6 @@
 import React from 'react';
 import letterObjects from '../../letterObjects';
 import './style.css';
-import Header_long from '../Header/Header_long';
 
 const DragAndDrop = () => {
   return (

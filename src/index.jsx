@@ -8,15 +8,13 @@ import DragAndDrop from './Components/DragAndDrop/index';
 import Learn from './Components/Learn';
 import Footer from './Components/Footer';
 import Home from './Components/Home';
-<<<<<<< HEAD
 import SoundProvider from './Providers/SoundContext';
 import Header from './Components/HeaderComponents/Header';
-=======
->>>>>>> 2da7efb6740cf1c757a71c6691ed1ad719ce8dfc
 
 const App = () => (
-  <>
+  <SoundProvider>
     <Router>
+      <Header />
       <Switch>
         <Route path="/learn">
           <Learn />
@@ -30,6 +28,6 @@ const App = () => (
       </Switch>
     </Router>
     <Footer />
-  </>
+  </SoundProvider>
 );
 render(<App />, document.querySelector('#app'));
