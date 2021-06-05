@@ -1,0 +1,27 @@
+.target {
+  display: flex;
+}
+
+.target img {
+  align-items: center;
+  width: 300px;
+  position: center;
+  margin: auto;
+  border-radius: 50%;
+}
+
+.options-container {
+  padding-top: 40px;
+  width: 70%;
+  margin: auto;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.option img {
+  width: 100px;
+  padding: 10px;
+  background-color: rgb(218, 218, 218);
+  border-radius: 50%;
+}
