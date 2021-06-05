@@ -1,10 +1,22 @@
 import React from 'react';
-import letterObjects from '../../letterObjects';
 import './style.css';
-import Header_long from '../Header/Header_long';
+import { Container } from './Container';
+import { DndProvider } from 'react-dnd';
+import { HTML5Backend } from 'react-dnd-html5-backend';
 
 const DragAndDrop = () => {
   return (
+    <>
+      <DndProvider backend={HTML5Backend}>
+        <Container />
+      </DndProvider>
+    </>
+  );
+};
+
+export default DragAndDrop;
+
+/* return (
     <>
       <div className="target">
         <img src={letterObjects[31].picture.image} alt="" />
@@ -24,7 +36,4 @@ const DragAndDrop = () => {
         </div>
       </div>
     </>
-  );
-};
-
-export default DragAndDrop;
+  ); */

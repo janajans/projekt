@@ -19,9 +19,16 @@
   flex-wrap: wrap;
 }
 
+.option {
+  width: 150px;
+  height: 150px;
+  display: flex;
+  background-color: rgb(224, 220, 220);
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+}
+
 .option img {
   width: 100px;
-  padding: 10px;
-  background-color: rgb(218, 218, 218);
-  border-radius: 50%;
 }
