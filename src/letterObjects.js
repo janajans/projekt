@@ -297,3 +297,5 @@ const letterObjects = [
     picture: { image: './assets/images/zalud.svg', sound: '' },
   },
 ];
+
+export default letterObjects;
