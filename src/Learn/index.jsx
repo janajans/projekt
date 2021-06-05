@@ -1,6 +1,6 @@
 import React from 'react';
 import './style.css';
-import bus from './img/autobus.png';
+import bus from '../assets/images/autobus.svg';
 import Header_long from '../Header_long';
 
 const Learn = () => {
