@@ -1,52 +1,34 @@
 import React, { useState } from 'react';
 import letterObjects from '../../letterObjects';
+import { randomIndexesGenerator } from '../../Util/randomIndexGenerator';
 import './style.css';
 
 const Pexeso = () => {
-  const [randomIndex, setRandomIndex] = useState(
-    Math.floor(Math.random() * letterObjects.length),
-  );
+  const [randomIndexes] = useState(randomIndexesGenerator(3));
 
   return (
     <>
       <div className="container-pexeso">
         <div className="pexeso-images">
-          <img
-            className="pexeso-image"
-            src={letterObjects[randomIndex].picture.image}
-            alt=""
-          />
-          <img
-            className="pexeso-image"
-            src={letterObjects[randomIndex].picture.image}
-            alt=""
-          />
-          <img
-            className="pexeso-image"
-            src={letterObjects[randomIndex].picture.image}
-            alt=""
-          />
+          {randomIndexes.map((index) => (
+            <img
+              className="pexeso-item"
+              src={letterObjects[index].picture.image}
+              alt=""
+            />
+          ))}
         </div>
         <div className="pexeso-letters">
-          <img
-            className="pexeso-letter"
-            src={letterObjects[randomIndex].letter.uppercase}
-            alt=""
-          />
-          <img
-            className="pexeso-letter"
-            src={letterObjects[randomIndex].letter.uppercase}
-            alt=""
-          />
-          <img
-            className="pexeso-letter"
-            src={letterObjects[randomIndex].letter.uppercase}
-            alt=""
-          />
+          {randomIndexes.map((index) => (
+            <img
+              className="pexeso-item"
+              src={letterObjects[index].letter.uppercase}
+              alt=""
+            />
+          ))}
         </div>
       </div>
     </>
   );
 };
-
 export default Pexeso;
