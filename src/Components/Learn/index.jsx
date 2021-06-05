@@ -1,7 +1,7 @@
 import React from 'react';
 import './style.css';
 import bus from './img/autobus.png';
-import Header_long from '../Header_long';
+import Header_long from '../Header/Header_long';
 
 const Learn = () => (
   <>
