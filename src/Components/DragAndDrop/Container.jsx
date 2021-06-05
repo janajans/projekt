@@ -3,29 +3,12 @@ import { memo } from 'react';
 import { Target } from './Target';
 import { Option } from './Option';
 import letterObjects from '../../letterObjects';
+import { randomIndexesGenerator } from '../../Util/randomIndexGenerator';
 
 export const Container = memo(function Container() {
-  const [indexValid] = useState(
-    Math.floor(Math.random() * letterObjects.length),
-  );
-
-  const randomIndexesGenerator = (i) => {
-    const index1 = Math.floor(Math.random() * letterObjects.length);
-
-    const arrayOfIndexes = [];
-
-    while (arrayOfIndexes.length < i) {
-      const index = Math.floor(Math.random() * letterObjects.length);
-      if (!arrayOfIndexes.includes(index)) {
-        arrayOfIndexes.push(index);
-      }
-    }
-
-    return arrayOfIndexes;
-  };
-
-  const list = [indexValid, 1, 1];
-  const shuffled = list.sort(() => Math.random() - 0.5);
+  const arrayOfIndexes = randomIndexesGenerator(3);
+  const [indexValid] = useState(arrayOfIndexes[0]);
+  const shuffledIndexes = arrayOfIndexes.sort(() => Math.random() - 0.5);
 
   return (
     <div>
@@ -34,9 +17,9 @@ export const Container = memo(function Container() {
       </div>
       <div>
         <div className="options-container">
-          <Option index={shuffled[0]} />
-          <Option index={shuffled[1]} />
-          <Option index={shuffled[2]} />
+          <Option index={shuffledIndexes[0]} />
+          <Option index={shuffledIndexes[1]} />
+          <Option index={shuffledIndexes[2]} />
         </div>
       </div>
     </div>
