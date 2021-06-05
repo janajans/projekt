@@ -7,7 +7,7 @@
 
 .learning-image {
   position: absolute;
-  left: 25vw;
+  left: 20vw;
   top: 25vh;
 }
 
@@ -61,7 +61,7 @@
   }
 }
 
-@media (min-width: 730px) {
+@media (min-width: 800px) {
   .container-learning img {
     width: 20%;
   }
@@ -97,8 +97,8 @@
       opacity: 0;
     }
     100% {
-      -webkit-transform: translateX(50vw);
-      transform: translateX(50vw);
+      -webkit-transform: translateX(40vw);
+      transform: translateX(40vw);
       opacity: 1;
     }
   }
@@ -109,8 +109,8 @@
       opacity: 0;
     }
     100% {
-      -webkit-transform: translateX(50vw);
-      transform: translateX(50vw);
+      -webkit-transform: translateX(40vw);
+      transform: translateX(40vw);
       opacity: 1;
     }
   }
