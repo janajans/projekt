@@ -3,7 +3,7 @@ import './style.css';
 import letterObjects from '../../letterObjects.js';
 import arrowRight from './img/arrowRight.png';
 
-const Learn = () => {
+const LearnItem = () => {
   const [showLetter, setShowLetter] = useState(false);
   const [randomIndex, setRandomIndex] = useState(
     Math.floor(Math.random() * letterObjects.length),
@@ -41,6 +41,6 @@ const Learn = () => {
   );
 };
 
-export default Learn;
+export default LearnItem;
 
 //  <Header><Zvuk><OdkazNaHome><Restart onRestart={handleRestart}></Header>

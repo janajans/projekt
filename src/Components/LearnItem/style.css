@@ -1,12 +1,11 @@
 .container-learning img {
-  width: 40%;
   padding: 10px;
   background-color: rgb(218, 218, 218);
   border-radius: 50%;
 }
 
 .learning-image {
-  position: absolute;
+  /* position: absolute; */
   left: 20vw;
   top: 25vh;
 }
@@ -63,7 +62,7 @@
 
 @media (min-width: 800px) {
   .container-learning img {
-    width: 20%;
+    width: 15%;
   }
 
   #arrow-right {
