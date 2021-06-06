@@ -1,6 +1,7 @@
 import React from 'react';
 import { useDragLayer } from 'react-dnd';
 import letterObjects from '../../letterObjects';
+import { Option } from '../../letterObjects';
 
 const layerStyles = {
   position: 'fixed',
@@ -37,7 +38,7 @@ export const CustomDragLayer = (props) => {
     }));
 
   function renderItem() {
-    return <img src={letterObjects[0].picture.image} />;
+    return props.item;
   }
   if (!isDragging) {
     return null;

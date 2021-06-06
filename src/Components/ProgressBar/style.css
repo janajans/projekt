@@ -1,0 +1,9 @@
+.bar-container {
+  width: 700px;
+  height: 30px;
+  background-color: black;
+}
+
+.progress-line {
+  height: 30px;
+}
