@@ -1,19 +1,19 @@
 .bar-container {
-  width: 800px;
-  height: 5px;
+  width: 1000px;
+  height: 3px;
   margin: auto;
   display: flex;
-  background-color: gray;
   justify-content: space-between;
   flex-direction: row;
+  margin-bottom: 100px;
 }
 
 .bar {
   flex-grow: 1;
-  background-color: red;
-  border-left: solid 5px white;
+  background-color: rgb(186, 186, 186);
+  border-left: solid 10px white;
 }
 
 .bar-done {
-  background-color: blueviolet;
+  background-color: black;
 }
