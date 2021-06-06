@@ -1,10 +1,12 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useContext } from 'react';
+import SoundProvider, { SoundContext } from '../../Providers/SoundContext';
 import letterObjects from '../../letterObjects';
 import { randomIndexesGenerator } from '../../Util/randomIndexGenerator';
 import './style.css';
 import { shuffledIndexes as shuffle } from '../../Util/arrayShuffler';
 
 const Pexeso = () => {
+  const { soundOn, setSoundOn } = useContext(SoundContext);
   const [randomIndexes] = useState(randomIndexesGenerator(3));
   const [selectedLetter, setSelectedLetter] = useState(null);
   const [selectedImage, setSelectedImage] = useState(null);
@@ -37,7 +39,11 @@ const Pexeso = () => {
 
   let audioSuccess = new Audio('../../assets/sounds/success.wav');
   useEffect(() => {
-    if (selectedLetter === selectedImage && selectedLetter !== null) {
+    if (
+      selectedLetter === selectedImage &&
+      selectedLetter !== null &&
+      soundOn
+    ) {
       audioSuccess.play();
     }
   }, [selectedLetter, selectedImage]);
@@ -47,7 +53,8 @@ const Pexeso = () => {
     if (
       selectedLetter !== selectedImage &&
       selectedLetter !== null &&
-      selectedImage !== null
+      selectedImage !== null &&
+      soundOn
     ) {
       audioFailure.play();
     }
@@ -55,7 +62,7 @@ const Pexeso = () => {
 
   let audioApplause = new Audio('../../assets/sounds/applause.mp3');
   useEffect(() => {
-    if (correctPairs.length === 3) {
+    if (correctPairs.length === 3 && soundOn) {
       audioApplause.play();
     }
   }, [correctPairs]);
@@ -68,6 +75,7 @@ const Pexeso = () => {
             const selected = index === selectedImage;
             const paired = correctPairs.includes(index);
             const wrong = wrongImage === index;
+            const successful = correctPairs.length === 3;
             let className = 'pexeso-item';
             if (selected) {
               className += ' pexeso-item-selected';
@@ -75,6 +83,9 @@ const Pexeso = () => {
               className += ' pexeso-item-paired';
             } else if (wrong) {
               className += ' pexeso-item-wrong';
+            }
+            if (successful) {
+              className += ' pexeso-item-successful';
             }
             return (
               <img
@@ -94,6 +105,7 @@ const Pexeso = () => {
             const selected = index === selectedLetter;
             const paired = correctPairs.includes(index);
             const wrong = wrongLetter === index;
+            const successful = correctPairs.length === 3;
             let className = 'pexeso-item';
             if (selected) {
               className += ' pexeso-item-selected';
@@ -101,6 +113,9 @@ const Pexeso = () => {
               className += ' pexeso-item-paired';
             } else if (wrong) {
               className += ' pexeso-item-wrong';
+            }
+            if (successful) {
+              className += ' pexeso-item-successful';
             }
             return (
               <img
