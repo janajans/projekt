@@ -1,10 +1,9 @@
-import { usePreview } from 'react-dnd-preview';
 import React, { useState } from 'react';
 import { memo } from 'react';
 import { Target } from './Target';
 import { Option } from './Option';
-import letterObjects from '../../letterObjects';
 import { randomIndexesGenerator } from '../../Util/randomIndexGenerator';
+import { ProgressBar } from '../ProgressBar';
 
 export const Container = memo(function Container() {
   const arrayOfIndexes = randomIndexesGenerator(3);
@@ -13,6 +12,7 @@ export const Container = memo(function Container() {
 
   return (
     <div>
+      <ProgressBar numberOfLevels={107.55} currentLevel={44.5654649} />
       <div>
         <Target index={indexValid} />
       </div>
