@@ -37,10 +37,8 @@ const Pexeso = () => {
 
   let audio = new Audio('../../assets/sounds/success.wav');
   useEffect(() => {
-    console.log(correctPairs);
     if (correctPairs.length === 3) {
       audio.play();
-      console.log('Play!');
     }
   }, [correctPairs]);
 
