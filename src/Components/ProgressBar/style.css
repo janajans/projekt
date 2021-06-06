@@ -1,9 +1,19 @@
 .bar-container {
-  width: 700px;
-  height: 30px;
-  background-color: black;
+  width: 800px;
+  height: 5px;
+  margin: auto;
+  display: flex;
+  background-color: gray;
+  justify-content: space-between;
+  flex-direction: row;
 }
 
-.progress-line {
-  height: 30px;
+.bar {
+  flex-grow: 1;
+  background-color: red;
+  border-left: solid 5px white;
+}
+
+.bar-done {
+  background-color: blueviolet;
 }

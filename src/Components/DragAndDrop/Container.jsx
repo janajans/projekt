@@ -12,7 +12,7 @@ export const Container = memo(function Container() {
 
   return (
     <div>
-      <ProgressBar numberOfLevels={107.55} currentLevel={44.5654649} />
+      <ProgressBar numberOfLevels={15} currentLevel={5} />
       <div>
         <Target index={indexValid} />
       </div>

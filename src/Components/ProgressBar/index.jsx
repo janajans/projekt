@@ -2,16 +2,22 @@ import './style.css';
 import React from 'react';
 
 export const ProgressBar = ({ numberOfLevels, currentLevel }) => {
-  const widthRatio = Math.floor((currentLevel / numberOfLevels) * 100) + '%';
-  console.log(widthRatio);
+  const classes = [];
+
+  for (let i = 0; i < currentLevel; i += 1) {
+    classes.push('bar bar-done');
+  }
+  console.log(classes);
+
+  for (let i = 0; i < numberOfLevels - currentLevel; i += 1) {
+    classes.push('bar');
+  }
+  console.log(classes);
   return (
-    <>
-      <div className="bar-container">
-        <div
-          className="progress-line"
-          style={{ width: widthRatio, backgroundColor: 'green' }}
-        ></div>
-      </div>
-    </>
+    <div className="bar-container">
+      {classes.map((bar) => (
+        <div className={bar}></div>
+      ))}
+    </div>
   );
 };
