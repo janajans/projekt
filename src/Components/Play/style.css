@@ -1,0 +1,9 @@
+.container--play {
+  display: flex;
+  justify-content: center;
+}
+
+#picture-letter,
+#pexeso {
+  width: 20vw;
+}

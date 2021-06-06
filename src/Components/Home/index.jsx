@@ -12,10 +12,7 @@ const Home = () => {
         <Link to="/learn">
           <img id="poketacek-learn" src={learnPicture} alt="ikonka učit se" />
         </Link>
-        <Link to="/dragdrop">
-          <img id="poketacek-play" src={playPicture} alt="ikonka hrát si" />
-        </Link>
-        <Link to="/pexeso">
+        <Link to="/play">
           <img id="poketacek-play" src={playPicture} alt="ikonka hrát si" />
         </Link>
       </div>

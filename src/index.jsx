@@ -11,6 +11,7 @@ import Home from './Components/Home';
 import SoundProvider from './Providers/SoundContext';
 import Header from './Components/HeaderComponents/Header';
 import Pexeso from './Components/Pexeso';
+import Play from './Components/Play';
 
 const App = () => (
   <SoundProvider>
@@ -19,6 +20,9 @@ const App = () => (
       <Switch>
         <Route path="/learn">
           <Learn />
+        </Route>
+        <Route path="/play">
+          <Play />
         </Route>
         <Route path="/dragdrop">
           <DragAndDrop />
