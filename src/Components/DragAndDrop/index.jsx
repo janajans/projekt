@@ -21,16 +21,4 @@ const DragAndDrop = () => {
   );
 };
 
-const MyPreview = () => {
-  const { display, itemType, item, style } = usePreview();
-  if (!display) {
-    return null;
-  }
-  return (
-    <div className="item-list__item" style={style}>
-      <img src={letterObjects[0].picture.image} />
-    </div>
-  );
-};
-
 export default DragAndDrop;
