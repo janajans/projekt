@@ -15,5 +15,9 @@
 }
 
 .pexeso-item-selected {
-  border: 5px solid black;
+  outline: 5px solid black;
+}
+
+.pexeso-item-paired {
+  opacity: 0.5;
 }

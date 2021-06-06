@@ -7,32 +7,64 @@ import { shuffledIndexes as shuffle } from '../../Util/arrayShuffler';
 const Pexeso = () => {
   const [randomIndexes] = useState(randomIndexesGenerator(3));
   const [selectedLetter, setSelectedLetter] = useState(null);
-  const [shuffledIndexes, setSchufledIndexes] = useState([]);
+  const [selectedImage, setSelectedImage] = useState(null);
+  const [shuffledIndexes, setShufledIndexes] = useState([]);
+  const [correctPairs, setCorrectPairs] = useState([]);
 
   useEffect(() => {
-    setSchufledIndexes(shuffle(randomIndexes));
+    setShufledIndexes(shuffle(randomIndexes));
   }, []);
+
+  useEffect(() => {
+    if (selectedLetter === selectedImage) {
+      const updatedArray = [selectedLetter, ...correctPairs];
+      setCorrectPairs(updatedArray);
+      setSelectedImage(null);
+      setSelectedLetter(null);
+    }
+  }, [selectedLetter, selectedImage]);
+
+  useEffect(() => {}, []);
+
   return (
     <>
       <div className="container-pexeso">
         <div className="pexeso-images">
-          {randomIndexes.map((index) => (
-            <img
-              className="pexeso-item"
-              src={letterObjects[index].picture.image}
-              alt=""
-              key={index}
-            />
-          ))}
+          {randomIndexes.map((index) => {
+            const selected = index === selectedImage;
+            const paired = correctPairs.includes(index);
+            let className = 'pexeso-item';
+            if (selected) {
+              className += ' pexeso-item-selected';
+            } else if (paired) {
+              className += ' pexeso-item-paired';
+            }
+            return (
+              <img
+                className={className}
+                src={letterObjects[index].picture.image}
+                alt=""
+                key={index}
+                onClick={() => {
+                  setSelectedImage(index);
+                }}
+              />
+            );
+          })}
         </div>
         <div className="pexeso-letters">
           {shuffledIndexes.map((index) => {
             const selected = index === selectedLetter;
+            const paired = correctPairs.includes(index);
+            let className = 'pexeso-item';
+            if (selected) {
+              className += ' pexeso-item-selected';
+            } else if (paired) {
+              className += ' pexeso-item-paired';
+            }
             return (
               <img
-                className={
-                  selected ? 'pexeso-item pexeso-item-selected' : 'pexeso-item'
-                }
+                className={className}
                 src={letterObjects[index].letter.uppercase}
                 alt=""
                 key={index}
