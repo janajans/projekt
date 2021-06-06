@@ -1,13 +1,13 @@
 import React, { useState, useEffect, useContext } from 'react';
-import SoundProvider, { SoundContext } from '../../Providers/SoundContext';
+import { SoundContext } from '../../Providers/SoundContext';
 import letterObjects from '../../letterObjects';
 import { randomIndexesGenerator } from '../../Util/randomIndexGenerator';
 import './style.css';
 import { shuffledIndexes as shuffle } from '../../Util/arrayShuffler';
 
 const Pexeso = () => {
-  const { soundOn, setSoundOn } = useContext(SoundContext);
-  const [randomIndexes] = useState(randomIndexesGenerator(3));
+  const { soundOn } = useContext(SoundContext);
+  const [randomIndexes, setRandomIndexes] = useState(randomIndexesGenerator(3));
   const [selectedLetter, setSelectedLetter] = useState(null);
   const [selectedImage, setSelectedImage] = useState(null);
   const [shuffledIndexes, setShufledIndexes] = useState([]);
@@ -62,8 +62,16 @@ const Pexeso = () => {
 
   let audioApplause = new Audio('../../assets/sounds/applause.mp3');
   useEffect(() => {
-    if (correctPairs.length === 3 && soundOn) {
+    if (soundOn && correctPairs.length === 3) {
       audioApplause.play();
+    }
+    if (correctPairs.length === 3) {
+      setTimeout(() => {
+        const newRandomIndexes = randomIndexesGenerator(3);
+        setRandomIndexes(newRandomIndexes);
+        setShufledIndexes(shuffle(newRandomIndexes));
+        setCorrectPairs([]);
+      }, 4000);
     }
   }, [correctPairs]);
 
@@ -91,10 +99,12 @@ const Pexeso = () => {
               <img
                 className={className}
                 src={letterObjects[index].picture.image}
-                alt=""
+                alt="pexeso game card showing a picture"
                 key={index}
                 onClick={() => {
-                  setSelectedImage(index);
+                  if (!paired) {
+                    setSelectedImage(index);
+                  }
                 }}
               />
             );
@@ -121,10 +131,12 @@ const Pexeso = () => {
               <img
                 className={className}
                 src={letterObjects[index].letter.uppercase}
-                alt=""
+                alt="pexeso game card showing a letter"
                 key={index}
                 onClick={() => {
-                  setSelectedLetter(index);
+                  if (!paired) {
+                    setSelectedLetter(index);
+                  }
                 }}
               />
             );
