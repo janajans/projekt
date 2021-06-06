@@ -11,6 +11,8 @@ const Header = () => {
   const { soundOn, setSoundOn } = useContext(SoundContext);
   const location = useLocation();
   const isLong = location.pathname !== '/';
+  const showRestartIcon =
+    location.pathname === '/dragdrop' || location.pathname === '/pexeso';
   return (
     <>
       <header>
@@ -24,12 +26,8 @@ const Header = () => {
               setSoundOn((value) => !value);
             }}
           />
-          {isLong && (
-            <>
-              <Icon_Restart />
-              <Icon_Home />
-            </>
-          )}
+          {isLong && <Icon_Home />}
+          {showRestartIcon && <Icon_Restart />}
         </div>
       </header>
       ;
