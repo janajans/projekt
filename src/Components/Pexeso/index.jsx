@@ -16,7 +16,7 @@ const Pexeso = () => {
   }, []);
 
   useEffect(() => {
-    if (selectedLetter === selectedImage) {
+    if (selectedLetter === selectedImage && selectedLetter !== null) {
       const updatedArray = [selectedLetter, ...correctPairs];
       setCorrectPairs(updatedArray);
       setSelectedImage(null);
@@ -24,7 +24,14 @@ const Pexeso = () => {
     }
   }, [selectedLetter, selectedImage]);
 
-  useEffect(() => {}, []);
+  let audio = new Audio('../../assets/sounds/success.wav');
+  useEffect(() => {
+    console.log(correctPairs);
+    if (correctPairs.length === 3) {
+      audio.play();
+      console.log('Play!');
+    }
+  }, [correctPairs]);
 
   return (
     <>
