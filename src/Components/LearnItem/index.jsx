@@ -1,13 +1,12 @@
 import React, { useState } from 'react';
 import './style.css';
 import letterObjects from '../../letterObjects.js';
-import arrowRight from './img/arrowRight.png';
 
-const LearnItem = () => {
+const LearnItem = ({ randomIndex }) => {
   const [showLetter, setShowLetter] = useState(false);
-  const [randomIndex, setRandomIndex] = useState(
-    Math.floor(Math.random() * letterObjects.length),
-  );
+  // const [randomIndex, setRandomIndex] = useState(
+  //   Math.floor(Math.random() * letterObjects.length),
+  // );
 
   return (
     <>
@@ -28,19 +27,8 @@ const LearnItem = () => {
           />
         )}
       </div>
-      <img
-        id="arrow-right"
-        src={arrowRight}
-        alt="arrow to the right"
-        onClick={() => {
-          setRandomIndex(Math.floor(Math.random() * letterObjects.length));
-          setShowLetter(false);
-        }}
-      />
     </>
   );
 };
 
 export default LearnItem;
-
-//  <Header><Zvuk><OdkazNaHome><Restart onRestart={handleRestart}></Header>

@@ -37,10 +37,21 @@ const Pexeso = () => {
 
   let audio = new Audio('../../assets/sounds/success.wav');
   useEffect(() => {
-    if (correctPairs.length === 3) {
+    if (selectedLetter === selectedImage && selectedLetter !== null) {
       audio.play();
     }
-  }, [correctPairs]);
+  }, [selectedLetter, selectedImage]);
+
+  let audio2 = new Audio('../../assets/sounds/failure.wav');
+  useEffect(() => {
+    if (
+      selectedLetter !== selectedImage &&
+      selectedLetter !== null &&
+      selectedImage !== null
+    ) {
+      audio2.play();
+    }
+  }, [selectedLetter, selectedImage]);
 
   return (
     <>

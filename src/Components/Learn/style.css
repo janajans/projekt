@@ -1,0 +1,13 @@
+#arrow-right {
+  width: 13%;
+  position: absolute;
+  bottom: 2vw;
+  left: 45vw;
+}
+
+#arrow-left {
+  width: 13%;
+  position: absolute;
+  bottom: 2vw;
+  left: 30vw;
+}
