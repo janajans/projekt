@@ -1,3 +1,4 @@
+import { usePreview } from 'react-dnd-preview';
 import React, { useState } from 'react';
 import { memo } from 'react';
 import { Target } from './Target';

@@ -22,7 +22,7 @@ export const Target = ({ index }) => {
       } else if (index === item.index) {
         setSuccess(options.success);
       }
-      setTimeout(() => setSuccess(options.default), 1000);
+      setTimeout(() => setSuccess(options.default), 500);
     },
   }));
   let classname = '';
