@@ -1,4 +1,4 @@
-import React, { useState, Fragment } from 'react';
+import React, { useState, Fragment, useEffect } from 'react';
 import LearnItem from '../LearnItem/index';
 import arrowRight from './img/arrowRight.png';
 import arrowLeft from './img/arrowLeft.png';
@@ -6,31 +6,41 @@ import { randomIndexesGenerator } from '../../Util/randomIndexGenerator';
 import './style.css';
 
 const Learn = () => {
-  const [randomIndexes, setrandomIndexes] = useState(randomIndexesGenerator(3));
+  const [history, setHistory] = useState([randomIndexesGenerator(3)]);
+  const [currentPosition, setCurrentPosition] = useState(0);
 
+  useEffect(() => {
+    setCurrentPosition(history.length - 1);
+  }, [history]);
+  console.log(history, currentPosition);
   return (
     <Fragment>
       <div className="learn-items">
-        {randomIndexes.map((index) => {
-          return (
-            <Fragment key={index}>
-              <LearnItem randomIndex={index} />
-            </Fragment>
-          );
+        {history[currentPosition].map((index) => {
+          return <LearnItem key={index} randomIndex={index} />;
         })}
       </div>
-      <img
-        id="arrow-left"
-        src={arrowLeft}
-        alt="arrow to the left"
-        // onClick={go back to previous set of images}
-      />
+      {currentPosition !== 0 && (
+        <img
+          id="arrow-left"
+          src={arrowLeft}
+          alt="arrow to the left"
+          onClick={() => {
+            setCurrentPosition(currentPosition - 1);
+          }}
+        />
+      )}
       <img
         id="arrow-right"
         src={arrowRight}
         alt="arrow to the right"
         onClick={() => {
-          setrandomIndexes(randomIndexesGenerator(3));
+          if (currentPosition === history.length - 1) {
+            const nextLevel = randomIndexesGenerator(3);
+            setHistory([...history, nextLevel]);
+          } else {
+            setCurrentPosition(currentPosition + 1);
+          }
         }}
       />
     </Fragment>
