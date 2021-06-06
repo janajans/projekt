@@ -10,6 +10,8 @@ const Pexeso = () => {
   const [selectedImage, setSelectedImage] = useState(null);
   const [shuffledIndexes, setShufledIndexes] = useState([]);
   const [correctPairs, setCorrectPairs] = useState([]);
+  const [wrongLetter, setWrongLetter] = useState(null);
+  const [wrongImage, setWrongImage] = useState(null);
 
   useEffect(() => {
     setShufledIndexes(shuffle(randomIndexes));
@@ -19,6 +21,15 @@ const Pexeso = () => {
     if (selectedLetter === selectedImage && selectedLetter !== null) {
       const updatedArray = [selectedLetter, ...correctPairs];
       setCorrectPairs(updatedArray);
+      setSelectedImage(null);
+      setSelectedLetter(null);
+    } else if (
+      selectedLetter !== selectedImage &&
+      selectedLetter !== null &&
+      selectedImage !== null
+    ) {
+      setWrongImage(selectedImage);
+      setWrongLetter(selectedLetter);
       setSelectedImage(null);
       setSelectedLetter(null);
     }
@@ -40,11 +51,14 @@ const Pexeso = () => {
           {randomIndexes.map((index) => {
             const selected = index === selectedImage;
             const paired = correctPairs.includes(index);
+            const wrong = wrongImage === index;
             let className = 'pexeso-item';
             if (selected) {
               className += ' pexeso-item-selected';
             } else if (paired) {
               className += ' pexeso-item-paired';
+            } else if (wrong) {
+              className += ' pexeso-item-wrong';
             }
             return (
               <img
@@ -63,11 +77,14 @@ const Pexeso = () => {
           {shuffledIndexes.map((index) => {
             const selected = index === selectedLetter;
             const paired = correctPairs.includes(index);
+            const wrong = wrongLetter === index;
             let className = 'pexeso-item';
             if (selected) {
               className += ' pexeso-item-selected';
             } else if (paired) {
               className += ' pexeso-item-paired';
+            } else if (wrong) {
+              className += ' pexeso-item-wrong';
             }
             return (
               <img
