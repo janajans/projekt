@@ -4,9 +4,6 @@ import letterObjects from '../../letterObjects.js';
 
 const LearnItem = ({ randomIndex }) => {
   const [showLetter, setShowLetter] = useState(false);
-  // const [randomIndex, setRandomIndex] = useState(
-  //   Math.floor(Math.random() * letterObjects.length),
-  // );
 
   return (
     <>
