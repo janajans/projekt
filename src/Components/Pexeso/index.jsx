@@ -71,7 +71,7 @@ const Pexeso = () => {
         setRandomIndexes(newRandomIndexes);
         setShufledIndexes(shuffle(newRandomIndexes));
         setCorrectPairs([]);
-      }, 4000);
+      }, 3200);
     }
   }, [correctPairs]);
 
