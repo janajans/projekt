@@ -1,4 +1,4 @@
-import React, { useState, useContext } from 'react';
+import React, { useState, useContext, useEffect } from 'react';
 import './style.css';
 import letterObjects from '../../letterObjects.js';
 import { SoundContext } from '../../Providers/SoundContext';
@@ -13,6 +13,10 @@ const LearnItem = ({ randomIndex }) => {
   let audioLetters = new Audio(
     `../../assets/sounds/soundsOfLetters/${randomIndex}.mp3`,
   );
+
+  useEffect(() => {
+    setShowLetter(false);
+  }, [showLetter]);
 
   return (
     <>
