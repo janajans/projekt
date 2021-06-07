@@ -1,9 +1,11 @@
-import React, { useState } from 'react';
+import React, { useState, useContext } from 'react';
 import './style.css';
 import letterObjects from '../../letterObjects.js';
+import { SoundContext } from '../../Providers/SoundContext';
 
 const LearnItem = ({ randomIndex }) => {
   const [showLetter, setShowLetter] = useState(false);
+  const { soundOn } = useContext(SoundContext);
 
   let audioPictures = new Audio(
     `../../assets/sounds/soundsOfPictures/${randomIndex}.mp3`,
@@ -21,7 +23,9 @@ const LearnItem = ({ randomIndex }) => {
           alt=""
           onClick={() => {
             setShowLetter((value) => !value);
-            audioPictures.play();
+            if (soundOn) {
+              audioPictures.play();
+            }
           }}
         />
         {showLetter && (
@@ -30,7 +34,9 @@ const LearnItem = ({ randomIndex }) => {
             src={letterObjects[randomIndex].letter.uppercase}
             alt=""
             onClick={() => {
-              audioLetters.play();
+              if (soundOn) {
+                audioLetters.play();
+              }
             }}
           />
         )}
