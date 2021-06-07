@@ -4,14 +4,15 @@ import Icon_Home from '../Icon_Home';
 import Icon_Poketacek from '../Icon_Poketacek';
 import Icon_Restart from '../Icon_Restart';
 import Icon_Sound from '../Icon_Sound';
+import Icon_PlayOptions from '../Icon_PlayOptions';
 import './style.css';
-import { useLocation } from 'react-router-dom';
+import { useLocation, Link } from 'react-router-dom';
 
 const Header = () => {
   const { soundOn, setSoundOn } = useContext(SoundContext);
   const location = useLocation();
   const isLong = location.pathname !== '/';
-  const showRestartIcon =
+  const showRestartAndGameIcon =
     location.pathname === '/dragdrop' || location.pathname === '/pexeso';
   return (
     <>
@@ -20,6 +21,14 @@ const Header = () => {
           <Icon_Poketacek />
         </div>
         <div className="header--right">
+          {showRestartAndGameIcon && (
+            <>
+              <Icon_Restart />
+              <Link to="/play">
+                <Icon_PlayOptions />
+              </Link>
+            </>
+          )}
           <Icon_Sound
             on={soundOn}
             onClick={() => {
@@ -27,7 +36,6 @@ const Header = () => {
             }}
           />
           {isLong && <Icon_Home />}
-          {showRestartIcon && <Icon_Restart />}
         </div>
       </header>
       ;

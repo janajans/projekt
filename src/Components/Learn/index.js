@@ -13,6 +13,7 @@ const Learn = () => {
     setCurrentPosition(history.length - 1);
   }, [history]);
   console.log(history, currentPosition);
+
   return (
     <Fragment>
       <div className="learn-items">
