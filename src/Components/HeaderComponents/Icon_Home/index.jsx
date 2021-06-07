@@ -6,7 +6,9 @@ import { Link } from 'react-router-dom';
 const Icon_Home = () => (
   <>
     <Link to="/">
-      <img id="icon_home" src={icon_home} alt="home icon" />;
+      <div className="wrapper">
+        <img id="icon_home" src={icon_home} alt="home icon" />
+      </div>
     </Link>
   </>
 );
