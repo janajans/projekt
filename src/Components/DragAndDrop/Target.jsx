@@ -1,4 +1,5 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useContext } from 'react';
+import { SoundContext } from '../../Providers/SoundContext';
 import { useDrop } from 'react-dnd';
 import { ItemTypes } from './ItemTypes';
 import letterObjects from '../../letterObjects';
@@ -10,6 +11,7 @@ const options = {
 };
 
 export const Target = ({ index }) => {
+  const { soundOn } = useContext(SoundContext);
   const [successful, setSuccess] = useState(options.default);
 
   const [{ canDrop, isOver }, drop] = useDrop(() => ({
@@ -32,10 +34,14 @@ export const Target = ({ index }) => {
 
   if (successful === options.success) {
     classname = 'target--successful';
-    audioSuccess.play();
+    if (soundOn) {
+      audioSuccess.play();
+    }
   } else if (successful === options.unsuccess) {
     classname = 'target--unsuccessful';
-    audioFailure.play();
+    if (soundOn) {
+      audioFailure.play();
+    }
   }
 
   console.log(classname);
