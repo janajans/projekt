@@ -27,10 +27,15 @@ export const Target = ({ index }) => {
   }));
   let classname = '';
 
+  let audioFailure = new Audio('../../assets/sounds/failure.wav');
+  let audioSuccess = new Audio('../../assets/sounds/success.wav');
+
   if (successful === options.success) {
     classname = 'target--successful';
+    audioSuccess.play();
   } else if (successful === options.unsuccess) {
     classname = 'target--unsuccessful';
+    audioFailure.play();
   }
 
   console.log(classname);
