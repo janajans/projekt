@@ -247,7 +247,7 @@ const letterObjects = [
       sound: './assets/sounds/soundsOfLetters/20.mp3',
     },
     picture: {
-      image: './assets/images/pero.svg',
+      image: './assets/images/quido.svg',
       sound: './assets/sounds/soundsOfPictures/20.mp3',
     },
   },
