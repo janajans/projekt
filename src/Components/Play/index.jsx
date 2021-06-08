@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import picture_letter from './img/picture-letter.svg';
-import pexeso from './img/pexeso.svg';
+import picture_letter from './img/picture-letter-game-icon.svg';
+import pexeso from './img/pexeso-game-icon.svg';
 import './style.css';
 
 const Play = () => {
