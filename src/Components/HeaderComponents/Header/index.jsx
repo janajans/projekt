@@ -38,7 +38,6 @@ const Header = () => {
           {isLong && <Icon_Home />}
         </div>
       </header>
-      ;
     </>
   );
 };
