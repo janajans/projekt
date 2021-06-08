@@ -11,18 +11,25 @@ export const Container = memo(function Container() {
   const shuffledIndexes = arrayOfIndexes.sort(() => Math.random() - 0.5);
 
   return (
-    <div>
+    <>
       <ProgressBar numberOfLevels={15} currentLevel={5} />
       <div>
         <Target index={indexValid} />
       </div>
-      <div>
-        <div className="options-container">
+
+      <div className="options-container">
+        <div className="option-container">
           <Option index={shuffledIndexes[0]} />
+        </div>
+
+        <div className="option-container">
           <Option index={shuffledIndexes[1]} />
+        </div>
+
+        <div className="option-container">
           <Option index={shuffledIndexes[2]} />
         </div>
       </div>
-    </div>
+    </>
   );
 });

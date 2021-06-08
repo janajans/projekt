@@ -11,12 +11,10 @@
 }
 
 .target--unsuccessful {
-  border: red solid 5px;
   animation: shake 0.5s;
 }
 
 .target--successful {
-  border: lightgreen solid 5px;
   -webkit-animation: rotate 0.5s cubic-bezier(0.455, 0.03, 0.515, 0.955) both;
   animation: rotate 0.5s cubic-bezier(0.455, 0.03, 0.515, 0.955) both;
 }
@@ -87,17 +85,21 @@
   justify-content: space-around;
   flex-wrap: wrap;
 }
+.option-container {
+  width: 33%;
+}
 
 .option {
-  width: 150px;
-  height: 150px;
+  width: 200px;
+  height: 200px;
   display: flex;
-  background-color: rgb(224, 220, 220);
+  background-color: rgb(22, 221, 224);
+  margin: 10px;
   align-items: center;
   justify-content: center;
   border-radius: 50%;
 }
 
 .option img {
-  width: 100px;
+  width: 200px;
 }
