@@ -4,11 +4,11 @@ const letterObjects = [
     letter: {
       lowercase: './assets/letters/a-lowercase.svg',
       uppercase: './assets/letters/a-uppercase.svg',
-      sound: './assets/sounds/soundsOfLetters/0.mp3',
+      sound: './assets/sounds/soundsOfLetters/a.mp3',
     },
     picture: {
       image: './assets/images/autobus.svg',
-      sound: './assets/sounds/soundsOfPictures/0.mp3',
+      sound: './assets/sounds/soundsOfPictures/autobus.mp3',
     },
   },
   {
@@ -16,11 +16,11 @@ const letterObjects = [
     letter: {
       lowercase: './assets/letters/b-lowercase.svg',
       uppercase: './assets/letters/b-uppercase.svg',
-      sound: './assets/sounds/soundsOfLetters/1.mp3',
+      sound: './assets/sounds/soundsOfLetters/b.mp3',
     },
     picture: {
       image: './assets/images/buben.svg',
-      sound: './assets/sounds/soundsOfPictures/1.mp3',
+      sound: './assets/sounds/soundsOfPictures/buben.mp3',
     },
   },
   {
@@ -28,11 +28,11 @@ const letterObjects = [
     letter: {
       lowercase: './assets/letters/c-lowercase.svg',
       uppercase: './assets/letters/c-uppercase.svg',
-      sound: './assets/sounds/soundsOfLetters/2.mp3',
+      sound: './assets/sounds/soundsOfLetters/c.mp3',
     },
     picture: {
       image: './assets/images/cirkus.svg',
-      sound: './assets/sounds/soundsOfPictures/2.mp3',
+      sound: './assets/sounds/soundsOfPictures/cirkus.mp3',
     },
   },
   {
@@ -40,11 +40,11 @@ const letterObjects = [
     letter: {
       lowercase: './assets/letters/cc-lowercase.svg',
       uppercase: './assets/letters/cc-uppercase.svg',
-      sound: './assets/sounds/soundsOfLetters/3.mp3',
+      sound: './assets/sounds/soundsOfLetters/cc.mp3',
     },
     picture: {
       image: './assets/images/cepice.svg',
-      sound: './assets/sounds/soundsOfPictures/3.mp3',
+      sound: './assets/sounds/soundsOfPictures/cepice.mp3',
     },
   },
   {
@@ -52,11 +52,11 @@ const letterObjects = [
     letter: {
       lowercase: './assets/letters/d-lowercase.svg',
       uppercase: './assets/letters/d-uppercase.svg',
-      sound: './assets/sounds/soundsOfLetters/4.mp3',
+      sound: './assets/sounds/soundsOfLetters/d.mp3',
     },
     picture: {
       image: './assets/images/dort.svg',
-      sound: './assets/sounds/soundsOfPictures/4.mp3',
+      sound: './assets/sounds/soundsOfPictures/dort.mp3',
     },
   },
   {
@@ -64,11 +64,11 @@ const letterObjects = [
     letter: {
       lowercase: './assets/letters/dd-lowercase.svg',
       uppercase: './assets/letters/dd-uppercase.svg',
-      sound: './assets/sounds/soundsOfLetters/5.mp3',
+      sound: './assets/sounds/soundsOfLetters/dd.mp3',
     },
     picture: {
       image: './assets/images/dabel.svg',
-      sound: './assets/sounds/soundsOfPictures/5.mp3',
+      sound: './assets/sounds/soundsOfPictures/dabel.mp3',
     },
   },
   {
@@ -76,11 +76,11 @@ const letterObjects = [
     letter: {
       lowercase: './assets/letters/e-lowercase.svg',
       uppercase: './assets/letters/e-uppercase.svg',
-      sound: './assets/sounds/soundsOfLetters/6.mp3',
+      sound: './assets/sounds/soundsOfLetters/e.mp3',
     },
     picture: {
       image: './assets/images/erb.svg',
-      sound: './assets/sounds/soundsOfPictures/6.mp3',
+      sound: './assets/sounds/soundsOfPictures/erb.mp3',
     },
   },
   {
@@ -88,11 +88,11 @@ const letterObjects = [
     letter: {
       lowercase: './assets/letters/f-lowercase.svg',
       uppercase: './assets/letters/f-uppercase.svg',
-      sound: './assets/sounds/soundsOfLetters/7.mp3',
+      sound: './assets/sounds/soundsOfLetters/f.mp3',
     },
     picture: {
       image: './assets/images/fletna.svg',
-      sound: './assets/sounds/soundsOfPictures/7.mp3',
+      sound: './assets/sounds/soundsOfPictures/fletna.mp3',
     },
   },
   {
@@ -100,11 +100,11 @@ const letterObjects = [
     letter: {
       lowercase: './assets/letters/g-lowercase.svg',
       uppercase: './assets/letters/g-uppercase.svg',
-      sound: './assets/sounds/soundsOfLetters/8.mp3',
+      sound: './assets/sounds/soundsOfLetters/g.mp3',
     },
     picture: {
       image: './assets/images/gorila.svg',
-      sound: './assets/sounds/soundsOfPictures/8.mp3',
+      sound: './assets/sounds/soundsOfPictures/gorila.mp3',
     },
   },
   {
@@ -112,11 +112,11 @@ const letterObjects = [
     letter: {
       lowercase: './assets/letters/h-lowercase.svg',
       uppercase: './assets/letters/h-uppercase.svg',
-      sound: './assets/sounds/soundsOfLetters/9.mp3',
+      sound: './assets/sounds/soundsOfLetters/h.mp3',
     },
     picture: {
       image: './assets/images/hodiny.svg',
-      sound: './assets/sounds/soundsOfPictures/9.mp3',
+      sound: './assets/sounds/soundsOfPictures/hodiny.mp3',
     },
   },
   {
@@ -124,11 +124,11 @@ const letterObjects = [
     letter: {
       lowercase: './assets/letters/ch-lowercase.svg',
       uppercase: './assets/letters/ch-uppercase.svg',
-      sound: './assets/sounds/soundsOfLetters/10.mp3',
+      sound: './assets/sounds/soundsOfLetters/ch.mp3',
     },
     picture: {
       image: './assets/images/chleba.svg',
-      sound: './assets/sounds/soundsOfPictures/10.mp3',
+      sound: './assets/sounds/soundsOfPictures/chleba.mp3',
     },
   },
   {
@@ -136,11 +136,11 @@ const letterObjects = [
     letter: {
       lowercase: './assets/letters/i-lowercase.svg',
       uppercase: './assets/letters/i-uppercase.svg',
-      sound: './assets/sounds/soundsOfLetters/11.mp3',
+      sound: './assets/sounds/soundsOfLetters/i.mp3',
     },
     picture: {
       image: './assets/images/iglu.svg',
-      sound: './assets/sounds/soundsOfPictures/11.mp3',
+      sound: './assets/sounds/soundsOfPictures/iglu.mp3',
     },
   },
   {
@@ -148,11 +148,11 @@ const letterObjects = [
     letter: {
       lowercase: './assets/letters/j-lowercase.svg',
       uppercase: './assets/letters/j-uppercase.svg',
-      sound: './assets/sounds/soundsOfLetters/12.mp3',
+      sound: './assets/sounds/soundsOfLetters/j.mp3',
     },
     picture: {
       image: './assets/images/jablko.svg',
-      sound: './assets/sounds/soundsOfPictures/12.mp3',
+      sound: './assets/sounds/soundsOfPictures/jablko.mp3',
     },
   },
   {
@@ -160,11 +160,11 @@ const letterObjects = [
     letter: {
       lowercase: './assets/letters/k-lowercase.svg',
       uppercase: './assets/letters/k-uppercase.svg',
-      sound: './assets/sounds/soundsOfLetters/13.mp3',
+      sound: './assets/sounds/soundsOfLetters/k.mp3',
     },
     picture: {
-      image: './assets/images/kasparek.svg',
-      sound: './assets/sounds/soundsOfPictures/13.mp3',
+      image: './assets/images/klaun.svg',
+      sound: './assets/sounds/soundsOfPictures/klaun.mp3',
     },
   },
   {
@@ -172,11 +172,11 @@ const letterObjects = [
     letter: {
       lowercase: './assets/letters/l-lowercase.svg',
       uppercase: './assets/letters/l-uppercase.svg',
-      sound: './assets/sounds/soundsOfLetters/14.mp3',
+      sound: './assets/sounds/soundsOfLetters/l.mp3',
     },
     picture: {
       image: './assets/images/lodicka.svg',
-      sound: './assets/sounds/soundsOfPictures/14.mp3',
+      sound: './assets/sounds/soundsOfPictures/lodicka.mp3',
     },
   },
   {
@@ -184,11 +184,11 @@ const letterObjects = [
     letter: {
       lowercase: './assets/letters/m-lowercase.svg',
       uppercase: './assets/letters/m-uppercase.svg',
-      sound: './assets/sounds/soundsOfLetters/15.mp3',
+      sound: './assets/sounds/soundsOfLetters/m.mp3',
     },
     picture: {
       image: './assets/images/motyl.svg',
-      sound: './assets/sounds/soundsOfPictures/15.mp3',
+      sound: './assets/sounds/soundsOfPictures/motyl.mp3',
     },
   },
   {
@@ -196,11 +196,11 @@ const letterObjects = [
     letter: {
       lowercase: './assets/letters/n-lowercase.svg',
       uppercase: './assets/letters/n-uppercase.svg',
-      sound: './assets/sounds/soundsOfLetters/16.mp3',
+      sound: './assets/sounds/soundsOfLetters/n.mp3',
     },
     picture: {
       image: './assets/images/noty.svg',
-      sound: './assets/sounds/soundsOfPictures/16.mp3',
+      sound: './assets/sounds/soundsOfPictures/noty.mp3',
     },
   },
   {
@@ -208,11 +208,11 @@ const letterObjects = [
     letter: {
       lowercase: './assets/letters/nn-lowercase.svg',
       uppercase: './assets/letters/nn-uppercase.svg',
-      sound: './assets/sounds/soundsOfLetters/17.mp3',
+      sound: './assets/sounds/soundsOfLetters/nn.mp3',
     },
     picture: {
       image: './assets/images/nuf.svg',
-      sound: './assets/sounds/soundsOfPictures/17.mp3',
+      sound: './assets/sounds/soundsOfPictures/nuf.mp3',
     },
   },
   {
@@ -220,11 +220,11 @@ const letterObjects = [
     letter: {
       lowercase: './assets/letters/o-lowercase.svg',
       uppercase: './assets/letters/o-uppercase.svg',
-      sound: './assets/sounds/soundsOfLetters/18.mp3',
+      sound: './assets/sounds/soundsOfLetters/o.mp3',
     },
     picture: {
       image: './assets/images/oko.svg',
-      sound: './assets/sounds/soundsOfPictures/18.mp3',
+      sound: './assets/sounds/soundsOfPictures/oko.mp3',
     },
   },
   {
@@ -232,11 +232,11 @@ const letterObjects = [
     letter: {
       lowercase: './assets/letters/p-lowercase.svg',
       uppercase: './assets/letters/p-uppercase.svg',
-      sound: './assets/sounds/soundsOfLetters/19.mp3',
+      sound: './assets/sounds/soundsOfLetters/p.mp3',
     },
     picture: {
       image: './assets/images/pero.svg',
-      sound: './assets/sounds/soundsOfPictures/19.mp3',
+      sound: './assets/sounds/soundsOfPictures/pero.mp3',
     },
   },
   {
@@ -244,11 +244,11 @@ const letterObjects = [
     letter: {
       lowercase: './assets/letters/q-lowercase.svg',
       uppercase: './assets/letters/q-uppercase.svg',
-      sound: './assets/sounds/soundsOfLetters/20.mp3',
+      sound: './assets/sounds/soundsOfLetters/q.mp3',
     },
     picture: {
       image: './assets/images/quido.svg',
-      sound: './assets/sounds/soundsOfPictures/20.mp3',
+      sound: './assets/sounds/soundsOfPictures/quido.mp3',
     },
   },
   {
@@ -256,11 +256,11 @@ const letterObjects = [
     letter: {
       lowercase: './assets/letters/r-lowercase.svg',
       uppercase: './assets/letters/r-uppercase.svg',
-      sound: './assets/sounds/soundsOfLetters/21.mp3',
+      sound: './assets/sounds/soundsOfLetters/r.mp3',
     },
     picture: {
       image: './assets/images/raketa.svg',
-      sound: './assets/sounds/soundsOfPictures/21.mp3',
+      sound: './assets/sounds/soundsOfPictures/raketa.mp3',
     },
   },
   {
@@ -268,11 +268,11 @@ const letterObjects = [
     letter: {
       lowercase: './assets/letters/rr-lowercase.svg',
       uppercase: './assets/letters/rr-uppercase.svg',
-      sound: './assets/sounds/soundsOfLetters/22.mp3',
+      sound: './assets/sounds/soundsOfLetters/rr.mp3',
     },
     picture: {
       image: './assets/images/redkvicka.svg',
-      sound: './assets/sounds/soundsOfPictures/22.mp3',
+      sound: './assets/sounds/soundsOfPictures/redkvicka.mp3',
     },
   },
   {
@@ -280,11 +280,11 @@ const letterObjects = [
     letter: {
       lowercase: './assets/letters/s-lowercase.svg',
       uppercase: './assets/letters/s-uppercase.svg',
-      sound: './assets/sounds/soundsOfLetters/s23mp3',
+      sound: './assets/sounds/soundsOfLetters/s.mp3',
     },
     picture: {
       image: './assets/images/slon.svg',
-      sound: './assets/sounds/soundsOfPictures/23.mp3',
+      sound: './assets/sounds/soundsOfPictures/slon.mp3',
     },
   },
   {
@@ -292,11 +292,11 @@ const letterObjects = [
     letter: {
       lowercase: './assets/letters/ss-lowercase.svg',
       uppercase: './assets/letters/ss-uppercase.svg',
-      sound: './assets/sounds/soundsOfLetters/24.mp3',
+      sound: './assets/sounds/soundsOfLetters/ss.mp3',
     },
     picture: {
       image: './assets/images/sala.svg',
-      sound: './assets/sounds/soundsOfPictures/24.mp3',
+      sound: './assets/sounds/soundsOfPictures/sala.mp3',
     },
   },
   {
@@ -304,11 +304,11 @@ const letterObjects = [
     letter: {
       lowercase: './assets/letters/t-lowercase.svg',
       uppercase: './assets/letters/t-uppercase.svg',
-      sound: './assets/sounds/soundsOfLetters/25.mp3',
+      sound: './assets/sounds/soundsOfLetters/t.mp3',
     },
     picture: {
       image: './assets/images/tulipan.svg',
-      sound: './assets/sounds/soundsOfPictures/25.mp3',
+      sound: './assets/sounds/soundsOfPictures/tulipan.mp3',
     },
   },
   {
@@ -316,11 +316,11 @@ const letterObjects = [
     letter: {
       lowercase: './assets/letters/tt-lowercase.svg',
       uppercase: './assets/letters/tt-uppercase.svg',
-      sound: './assets/sounds/soundsOfLetters/26.mp3',
+      sound: './assets/sounds/soundsOfLetters/tt.mp3',
     },
     picture: {
       image: './assets/images/tuhyk.svg',
-      sound: './assets/sounds/soundsOfPictures/26.mp3',
+      sound: './assets/sounds/soundsOfPictures/tuhyk.mp3',
     },
   },
   {
@@ -328,11 +328,11 @@ const letterObjects = [
     letter: {
       lowercase: './assets/letters/u-lowercase.svg',
       uppercase: './assets/letters/u-uppercase.svg',
-      sound: './assets/sounds/soundsOfLetters/27.mp3',
+      sound: './assets/sounds/soundsOfLetters/u.mp3',
     },
     picture: {
       image: './assets/images/upir.svg',
-      sound: './assets/sounds/soundsOfPictures/27.mp3',
+      sound: './assets/sounds/soundsOfPictures/upir.mp3',
     },
   },
   {
@@ -340,11 +340,11 @@ const letterObjects = [
     letter: {
       lowercase: './assets/letters/v-lowercase.svg',
       uppercase: './assets/letters/v-uppercase.svg',
-      sound: './assets/sounds/soundsOfLetters/28.mp3',
+      sound: './assets/sounds/soundsOfLetters/v.mp3',
     },
     picture: {
       image: './assets/images/veverka.svg',
-      sound: './assets/sounds/soundsOfPictures/28.mp3',
+      sound: './assets/sounds/soundsOfPictures/veverka.mp3',
     },
   },
   {
@@ -352,11 +352,11 @@ const letterObjects = [
     letter: {
       lowercase: './assets/letters/w-lowercase.svg',
       uppercase: './assets/letters/w-uppercase.svg',
-      sound: './assets/sounds/soundsOfLetters/29.mp3',
+      sound: './assets/sounds/soundsOfLetters/w.mp3',
     },
     picture: {
       image: './assets/images/wendy.svg',
-      sound: './assets/sounds/soundsOfPictures/29.mp3',
+      sound: './assets/sounds/soundsOfPictures/wendy.mp3',
     },
   },
   {
@@ -364,11 +364,11 @@ const letterObjects = [
     letter: {
       lowercase: './assets/letters/x-lowercase.svg',
       uppercase: './assets/letters/x-uppercase.svg',
-      sound: './assets/sounds/soundsOfLetters/30.mp3',
+      sound: './assets/sounds/soundsOfLetters/x.mp3',
     },
     picture: {
       image: './assets/images/xylofon.svg',
-      sound: './assets/sounds/soundsOfPictures/30.mp3',
+      sound: './assets/sounds/soundsOfPictures/xylofon.mp3',
     },
   },
   {
@@ -376,11 +376,11 @@ const letterObjects = [
     letter: {
       lowercase: './assets/letters/y-lowercase.svg',
       uppercase: './assets/letters/y-uppercase.svg',
-      sound: './assets/sounds/soundsOfLetters/31.mp3',
+      sound: './assets/sounds/soundsOfLetters/y.mp3',
     },
     picture: {
       image: './assets/images/yetti.svg',
-      sound: './assets/sounds/soundsOfPictures/31.mp3',
+      sound: './assets/sounds/soundsOfPictures/yetti.mp3',
     },
   },
   {
@@ -388,11 +388,11 @@ const letterObjects = [
     letter: {
       lowercase: './assets/letters/z-lowercase.svg',
       uppercase: './assets/letters/z-uppercase.svg',
-      sound: './assets/sounds/soundsOfLetters/32.mp3',
+      sound: './assets/sounds/soundsOfLetters/z.mp3',
     },
     picture: {
       image: './assets/images/zmrzlina.svg',
-      sound: './assets/sounds/soundsOfPictures/32.mp3',
+      sound: './assets/sounds/soundsOfPictures/zmrzlina.mp3',
     },
   },
   {
@@ -400,11 +400,11 @@ const letterObjects = [
     letter: {
       lowercase: './assets/letters/zz-lowercase.svg',
       uppercase: './assets/letters/zz-uppercase.svg',
-      sound: './assets/sounds/soundsOfLetters/33.mp3',
+      sound: './assets/sounds/soundsOfLetters/zz.mp3',
     },
     picture: {
       image: './assets/images/zalud.svg',
-      sound: './assets/sounds/soundsOfPictures/33.mp3',
+      sound: './assets/sounds/soundsOfPictures/zalud.mp3',
     },
   },
 ];

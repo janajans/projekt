@@ -7,12 +7,8 @@ const LearnItem = ({ randomIndex }) => {
   const [showLetter, setShowLetter] = useState(false);
   const { soundOn } = useContext(SoundContext);
 
-  let audioPictures = new Audio(
-    `../../assets/sounds/soundsOfPictures/${randomIndex}.mp3`,
-  );
-  let audioLetters = new Audio(
-    `../../assets/sounds/soundsOfLetters/${randomIndex}.mp3`,
-  );
+  let audioPictures = new Audio(letterObjects[randomIndex].picture.sound);
+  let audioLetters = new Audio(letterObjects[randomIndex].letter.sound);
 
   return (
     <>
