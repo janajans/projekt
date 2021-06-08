@@ -14,10 +14,6 @@ const LearnItem = ({ randomIndex }) => {
     `../../assets/sounds/soundsOfLetters/${randomIndex}.mp3`,
   );
 
-  useEffect(() => {
-    setShowLetter(false);
-  }, [showLetter]);
-
   return (
     <>
       <div className="container-learning">
@@ -40,6 +36,9 @@ const LearnItem = ({ randomIndex }) => {
             onClick={() => {
               if (soundOn) {
                 audioLetters.play();
+                setTimeout(() => {
+                  setShowLetter(false);
+                }, 3000);
               }
             }}
           />
