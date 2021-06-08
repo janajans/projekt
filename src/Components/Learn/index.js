@@ -1,7 +1,7 @@
 import React, { useState, Fragment, useEffect } from 'react';
 import LearnItem from '../LearnItem/index';
-import arrowRight from './img/arrowRight.png';
-import arrowLeft from './img/arrowLeft.png';
+import arrowRight from './img/arrowRight.svg';
+import arrowLeft from './img/arrowLeft.svg';
 import { randomIndexesGenerator } from '../../Util/randomIndexGenerator';
 import './style.css';
 
