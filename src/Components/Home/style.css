@@ -1,11 +1,39 @@
-#poketacek-learn,
-#poketacek-play {
-  width: 40vmin;
+@media screen and (min-width: 300px) {
+  #poketacek-learn,
+  #poketacek-play {
+    height: 30vh;
+  }
+
+  .container--home {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 82vh;
+  }
 }
 
-.container--home {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 84vh;
+@media screen and (min-width: 768px) {
+  .container--home {
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 82vh;
+  }
+
+  #poketacek-learn,
+  #poketacek-play {
+    height: 35vh;
+  }
+
+  .container--home {
+    height: 84vh;
+  }
 }
+
+/* 
+@media screen and (min-width: 1026px) {
+}
+
+*/

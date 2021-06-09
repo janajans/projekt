@@ -30,34 +30,36 @@ const Icon_Poketacek = () => {
   const poketacekDragDrop = location.pathname === '/dragdrop';
 
   return (
-    <img
-      className="header-icon"
-      src={icon_poketacek}
-      alt="mascot Poketacek"
-      onClick={() => {
-        if (poketacekHome) {
-          if (soundOn) {
-            audioAhojVyber.play();
+    <div className="wrapper">
+      <img
+        className="header-icon"
+        src={icon_poketacek}
+        alt="mascot Poketacek"
+        onClick={() => {
+          if (poketacekHome) {
+            if (soundOn) {
+              audioAhojVyber.play();
+            }
+          } else if (poketacekLearn) {
+            if (soundOn) {
+              audioCoVidis.play();
+            }
+          } else if (poketacekPlay) {
+            if (soundOn) {
+              audioVyberHrat.play();
+            }
+          } else if (poketacekPexeso) {
+            if (soundOn) {
+              audioCoKSobe.play();
+            }
+          } else if (poketacekDragDrop) {
+            if (soundOn) {
+              audioNaObrazek.play();
+            }
           }
-        } else if (poketacekLearn) {
-          if (soundOn) {
-            audioCoVidis.play();
-          }
-        } else if (poketacekPlay) {
-          if (soundOn) {
-            audioVyberHrat.play();
-          }
-        } else if (poketacekPexeso) {
-          if (soundOn) {
-            audioCoKSobe.play();
-          }
-        } else if (poketacekDragDrop) {
-          if (soundOn) {
-            audioNaObrazek.play();
-          }
-        }
-      }}
-    />
+        }}
+      />
+    </div>
   );
 };
 
