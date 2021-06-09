@@ -3,8 +3,10 @@ import './style.css';
 
 const Footer = () => (
   <footer>
-    Vyrobeno ve spolupráci s <a href="https://poketo.cz/">Poketo</a> a{' '}
-    <a href="https://www.czechitas.cz/cs/">Czechitas</a>, 2021.
+    <div className="footer-container">
+      Vyrobeno jako projekt <a href="https://poketo.cz/">Poketo</a> a{' '}
+      <a href="https://www.czechitas.cz/cs/">Czechitas</a>, 2021.
+    </div>
   </footer>
 );
 

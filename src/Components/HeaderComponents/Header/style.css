@@ -5,9 +5,14 @@ header {
   background: chocolate;
 }
 
-.header--right {
+.header--right,
+.header--left {
   display: flex;
   flex-direction: row;
+}
+
+.header--left:first-child {
+  margin-left: 1rem;
 }
 
 .header--right:last-child {
@@ -15,8 +20,8 @@ header {
 }
 
 .header-icon {
-  height: 90%;
-  margin-top: 10%;
+  height: 9vh;
+  margin-top: 1vh;
 }
 
 .wrapper {

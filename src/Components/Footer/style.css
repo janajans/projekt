@@ -1,9 +1,19 @@
 footer {
   width: 100%;
+  color: #aaaaa8;
   display: flex;
   align-items: center;
   justify-content: flex-end;
   height: 4vh;
+  background: rgb(197, 197, 197);
+}
 
-  background: gray;
+.footer-container {
+  margin-right: 1rem;
+}
+
+a {
+  text-decoration: none;
+  font-weight: bold;
+  color: #454544;
 }

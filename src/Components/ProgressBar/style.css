@@ -1,14 +1,16 @@
 .bar-container {
-  width: 1000px;
-  height: 3px;
+  width: 80vw;
+  height: 3vw;
   margin: auto;
   display: flex;
   justify-content: space-between;
+  align-items: center;
   flex-direction: row;
   margin-bottom: 100px;
 }
 
 .bar {
+  height: 3px;
   flex-grow: 1;
   background-color: rgb(186, 186, 186);
   border-left: solid 10px white;

@@ -1,5 +1,7 @@
 import React, { useContext } from 'react';
-import icon_poketacek from './img/poketacek-prozatimni.png';
+/* import icon_poketacek from './img/poketacek-prozatimni.png';
+ */ import icon_poketacek from './img/poketacek-loo.svg';
+
 import SoundProvider, { SoundContext } from '../../../Providers/SoundContext';
 import { useLocation } from 'react-router-dom';
 import '../Header/style.css';
