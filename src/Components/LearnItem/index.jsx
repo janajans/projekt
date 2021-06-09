@@ -34,7 +34,7 @@ const LearnItem = ({ randomIndex }) => {
                 audioLetters.play();
                 setTimeout(() => {
                   setShowLetter(false);
-                }, 3000);
+                }, 8000);
               }
             }}
           />

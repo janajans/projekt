@@ -21,29 +21,35 @@ const Learn = () => {
           return <LearnItem key={index} randomIndex={index} />;
         })}
       </div>
-      {currentPosition !== 0 && (
-        <img
-          id="arrow-left"
-          src={arrowLeft}
-          alt="arrow to the left"
-          onClick={() => {
-            setCurrentPosition(currentPosition - 1);
-          }}
-        />
-      )}
-      <img
-        id="arrow-right"
-        src={arrowRight}
-        alt="arrow to the right"
-        onClick={() => {
-          if (currentPosition === history.length - 1) {
-            const nextLevel = randomIndexesGenerator(3);
-            setHistory([...history, nextLevel]);
-          } else {
-            setCurrentPosition(currentPosition + 1);
-          }
-        }}
-      />
+      <div className="arrows-container">
+        <div className="arrow-container--left">
+          {currentPosition !== 0 && (
+            <img
+              id="arrow-left"
+              src={arrowLeft}
+              alt="arrow to the left"
+              onClick={() => {
+                setCurrentPosition(currentPosition - 1);
+              }}
+            />
+          )}
+        </div>
+        <div className="arrow-container--right">
+          <img
+            id="arrow-right"
+            src={arrowRight}
+            alt="arrow to the right"
+            onClick={() => {
+              if (currentPosition === history.length - 1) {
+                const nextLevel = randomIndexesGenerator(3);
+                setHistory([...history, nextLevel]);
+              } else {
+                setCurrentPosition(currentPosition + 1);
+              }
+            }}
+          />
+        </div>
+      </div>
     </Fragment>
   );
 };
