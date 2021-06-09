@@ -1,9 +1,11 @@
 .container--play {
   display: flex;
   justify-content: center;
+  align-items: center;
+  height: 84vh;
 }
 
-#picture-letter,
-#pexeso {
-  width: 20vw;
+.picture-letter-icon,
+.pexeso-icon {
+  width: 40vmin;
 }
