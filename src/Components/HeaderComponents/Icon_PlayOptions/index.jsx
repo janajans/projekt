@@ -1,11 +1,11 @@
 import React from 'react';
-import './style.css';
+import '../Header/style.css';
 import iconPlayOptions from './img/poketacek-play.svg';
 
 const Icon_PlayOptions = () => (
   <div className="wrapper">
     <img
-      id="icon_playOptions"
+      className="header-icon"
       src={iconPlayOptions}
       alt="icon of playing poketacek"
     />

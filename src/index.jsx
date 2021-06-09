@@ -5,7 +5,7 @@ import './style.css';
 import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
 // import Play from './Play/index';
 import DragAndDrop from './Components/DragAndDrop/index';
-// import Footer from './Components/Footer';
+import Footer from './Components/Footer';
 import Home from './Components/Home';
 import SoundProvider from './Providers/SoundContext';
 import Header from './Components/HeaderComponents/Header';
@@ -35,7 +35,7 @@ const App = () => (
         </Route>
       </Switch>
     </Router>
-    {/* <Footer /> */}
+    <Footer />
   </SoundProvider>
 );
 render(<App />, document.querySelector('#app'));

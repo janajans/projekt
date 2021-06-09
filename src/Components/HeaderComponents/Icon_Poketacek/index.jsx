@@ -1,7 +1,7 @@
 import React, { useContext } from 'react';
-import './style.css';
 import icon_poketacek from './img/poketacek-prozatimni.png';
 import SoundProvider, { SoundContext } from '../../../Providers/SoundContext';
+import '../Header/style.css';
 
 const Icon_Poketacek = () => {
   const { soundOn, setSoundOn } = useContext(SoundContext);
@@ -10,7 +10,7 @@ const Icon_Poketacek = () => {
   );
   return (
     <img
-      id="icon_poketacek"
+      className="header-icon"
       src={icon_poketacek}
       alt="mascot Poketacek"
       onClick={() => {

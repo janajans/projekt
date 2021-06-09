@@ -1,15 +1,13 @@
 .learn-items {
   margin: auto;
-  /*   position: relative;
- */
-  height: 70vh;
 }
 
 .arrows-container {
-  height: 15vh;
+  height: 13vh;
   width: 100%;
-  margin-top: 10px;
+  margin: auto;
   display: flex;
+  background: cornflowerblue;
 }
 
 #arrow-right,
@@ -20,9 +18,9 @@
 .arrow-container--left,
 .arrow-container--right {
   width: 400px;
-  margin: auto;
   display: flex;
   flex-direction: row;
+  margin: auto;
 }
 
 .arrow-container--left {
