@@ -1,4 +1,4 @@
-import React, { useState, Fragment, useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import LearnItem from '../LearnItem/index';
 import arrowRight from './img/arrowRight.svg';
 import arrowLeft from './img/arrowLeft.svg';
@@ -15,7 +15,7 @@ const Learn = () => {
   console.log(history, currentPosition);
 
   return (
-    <Fragment>
+    <>
       <div className="learn-items">
         {history[currentPosition].map((index) => {
           return <LearnItem key={index} randomIndex={index} />;
@@ -50,7 +50,7 @@ const Learn = () => {
           />
         </div>
       </div>
-    </Fragment>
+    </>
   );
 };
 
