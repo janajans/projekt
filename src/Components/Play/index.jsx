@@ -9,10 +9,10 @@ const Play = () => {
     <>
       <div className="container--play">
         <Link to="/dragdrop">
-          <img id="picture-letter" src={picture_letter} alt="" />
+          <img className="picture-letter-icon" src={picture_letter} alt="" />
         </Link>
         <Link to="/pexeso">
-          <img id="pexeso" src={pexeso} alt="" />
+          <img className="pexeso-icon" src={pexeso} alt="" />
         </Link>
       </div>
     </>
