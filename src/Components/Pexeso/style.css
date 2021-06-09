@@ -16,7 +16,8 @@
 }
 
 .pexeso-item-selected {
-  outline: 5px solid black;
+  /* outline: 5px solid black; */
+  box-shadow: 0 0 0 5px hsl(0, 3%, 6%);
 }
 
 .pexeso-item-paired {
