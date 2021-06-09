@@ -31,6 +31,7 @@ export const Target = ({ index }) => {
 
   let audioFailure = new Audio('../../assets/sounds/failure.wav');
   let audioSuccess = new Audio('../../assets/sounds/success.wav');
+  let audioPictures = new Audio(letterObjects[index].picture.sound);
 
   if (successful === options.success) {
     classname = 'target--successful';
@@ -52,6 +53,11 @@ export const Target = ({ index }) => {
         src={letterObjects[index].picture.image}
         className={classname}
         alt=""
+        onClick={() => {
+          if (soundOn) {
+            audioPictures.play();
+          }
+        }}
       />
     </div>
   );
