@@ -5,7 +5,9 @@ import SoundProvider, { SoundContext } from '../../../Providers/SoundContext';
 
 const Icon_Poketacek = () => {
   const { soundOn, setSoundOn } = useContext(SoundContext);
-  let audioAhojVyber = new Audio('../../assets/sounds/ahojVyber.mp3');
+  let audioAhojVyber = new Audio(
+    '../../assets/sounds/soundsOfPoketacek/ahojVyber.mp3',
+  );
   return (
     <img
       id="icon_poketacek"
