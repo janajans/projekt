@@ -1,27 +1,50 @@
 .options-container {
-  padding-top: 100px;
-  width: 70%;
-  margin: auto;
+  height: 35vh;
+  width: 100vw;
   display: flex;
-  justify-content: space-around;
   flex-wrap: wrap;
+  justify-content: center;
+  align-content: flex-start;
 }
 
 .option-container {
-  width: 33%;
+  width: 40vw;
+  height: calc(32vh / 2);
+  display: flex;
+  justify-content: space-around;
 }
 
 .option {
-  width: 200px;
-  height: 200px;
+  height: calc(32vh / 2);
+  width: calc(32vh / 2);
   display: flex;
-  background-color: rgb(22, 221, 224);
-  margin: 10px;
   align-items: center;
   justify-content: center;
   border-radius: 50%;
 }
 
 .option img {
-  width: 200px;
+  height: 100%;
+  min-width: 0;
+  min-height: 0;
+  background-color: rgb(224, 22, 224);
+  border-radius: 50%;
 }
+
+/* 
+@media screen and (min-width: 768px) {
+  .option-container {
+      height: calc(100% / 3);
+
+    width: 33%;
+  }
+
+  .options-container {
+    height: 14vh;
+    width: 70%;
+    margin: auto;
+    display: flex;
+    justify-content: space-around;
+  }
+}
+ */

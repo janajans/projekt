@@ -1,6 +1,6 @@
 .bar-container {
   width: 70vw;
-  height: 8vh;
+  height: 6vh;
   margin: auto;
   display: flex;
   justify-content: space-between;
@@ -12,6 +12,7 @@
   flex-grow: 1;
   background-color: rgb(186, 186, 186);
   border-left: solid 10px white;
+  margin-top: 2vh;
 }
 
 .bar-done {
