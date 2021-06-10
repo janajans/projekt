@@ -31,11 +31,11 @@ header {
 }
 
 .header-icon {
-  height: 80%;
+  height: 8vh;
 }
 
 .wrapper {
-  height: 100%;
+  height: 10vh;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
