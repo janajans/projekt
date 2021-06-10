@@ -21,6 +21,7 @@ export const Container = memo(function Container() {
 
   const handleNewLevel = () => {
     setArrayOfIndexes(randomIndexesGenerator(3));
+    setIndexValid(arrayOfIndexes[0]);
   };
 
   return (
