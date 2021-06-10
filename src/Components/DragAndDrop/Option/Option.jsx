@@ -4,7 +4,7 @@ import { useDrag } from 'react-dnd';
 import { ItemTypes } from '../ItemTypes';
 import letterObjects from '../../../letterObjects';
 import { CustomDragLayer } from '../CustomDragLayer';
-import './styles.css';
+import './style.css';
 
 export const Option = function Option({ index }) {
   const { soundOn } = useContext(SoundContext);

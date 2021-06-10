@@ -35,6 +35,10 @@
     justify-content: flex-start;
   }
 
+  .container-content a:first-child {
+    justify-content: flex-end;
+  }
+
   #poketacek-learn,
   #poketacek-play {
     height: 100%;

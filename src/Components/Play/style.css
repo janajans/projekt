@@ -7,6 +7,7 @@
 }
 
 .container-content a {
+  padding: 2vh;
   display: flex;
   justify-content: center;
 }
@@ -30,18 +31,25 @@
     height: 100%;
     width: 75vw;
     min-width: 30vh;
+    flex-direction: row;
+    justify-content: flex-start;
+  }
+
+  .container-content a:first-child {
     justify-content: flex-end;
   }
 
   .picture-letter-icon,
   .pexeso-icon {
     height: 100%;
+    max-width: 420px;
   }
 }
 /* 
 @media screen and (min-width: 900px) {
 }
 */
+
 /* @media screen and (min-width: 1200px) {
 
   } */
