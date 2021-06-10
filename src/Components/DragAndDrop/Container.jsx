@@ -25,7 +25,7 @@ export const Container = memo(function Container() {
   };
 
   return (
-    <>
+    <div className="content-container">
       <ProgressBar numberOfLevels={10} currentLevel={5} />
 
       <Target
@@ -47,6 +47,6 @@ export const Container = memo(function Container() {
           <Option index={shuffledIndexes[2]} />
         </div>
       </div>
-    </>
+    </div>
   );
 });

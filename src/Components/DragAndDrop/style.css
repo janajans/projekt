@@ -1,0 +1,21 @@
+.content-container {
+  height: 82vh;
+  display: flex;
+  flex-direction: column;
+  align-content: space-around;
+}
+
+@media screen and (min-width: 600px) {
+  .content-container {
+    height: 86vh;
+  }
+}
+
+@media screen and (min-width: 900px) {
+  .content-container {
+    height: 80vh;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+}

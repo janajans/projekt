@@ -1,9 +1,9 @@
-.container--play {
+.container-content {
+  height: 88vh;
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
   align-items: center;
-  height: 82vh;
 }
 
 .picture-letter-icon,
@@ -12,9 +12,9 @@
   min-width: 0;
   min-height: 0;
 }
-
-@media screen and (min-width: 768px) {
-  .container--play {
+/* 
+@media screen and (min-width: 600px) {
+  .container-content {
     flex-direction: row;
     justify-content: center;
     align-items: center;
@@ -28,8 +28,12 @@
   }
 }
 
-/* 
-@media screen and (min-width: 1026px) {
+@media screen and (min-width: 900px) {
+  .content-container {
+    height: 80vh;
+  }
 }
 
-*/
+@media screen and (min-width: 1200px) {
+}
+ */
