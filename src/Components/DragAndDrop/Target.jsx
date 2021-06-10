@@ -21,10 +21,10 @@ export const Target = ({ index }) => {
 
       if (index !== item.index) {
         setSuccess(options.unsuccess);
+        setTimeout(() => setSuccess(options.default), 500);
       } else if (index === item.index) {
         setSuccess(options.success);
       }
-      setTimeout(() => setSuccess(options.default), 500);
     },
   }));
   let classname = '';
