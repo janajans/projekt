@@ -4,12 +4,9 @@ footer {
   width: 100vw;
   color: #242422;
   display: flex;
-  align-items: center;
   justify-content: flex-end;
-}
-
-.footer-container {
-  margin-right: 0.5rem;
+  align-items: center;
+  padding: 0 0.5rem;
 }
 
 a {
@@ -18,19 +15,10 @@ a {
   color: #242422;
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 650px) {
   footer {
-    height: 8vh;
+    height: 6vh;
     background-color: rgb(187, 124, 124);
-  }
-
-  .footer-container {
-    margin-right: 1rem;
-  }
-}
-
-@media screen and (min-width: 1026px) {
-  footer {
-    background-color: rgb(136, 202, 179);
+    padding: 0 1rem;
   }
 }

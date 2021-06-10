@@ -2,8 +2,13 @@
   height: 88vh;
   display: flex;
   flex-direction: column;
-  justify-content: space-evenly;
-  align-items: center;
+  justify-content: center;
+  width: 100vw;
+}
+
+.container-content a {
+  display: flex;
+  justify-content: center;
 }
 
 #poketacek-learn,
@@ -12,22 +17,25 @@
   min-width: 0;
   min-height: 0;
 }
-/* 
-@media screen and (min-width: 600px) {
+
+@media screen and (min-width: 650px) {
   .container-content {
+    height: 84vh;
     flex-direction: row;
     justify-content: center;
-    align-items: center;
-    width: 100vw;
-    height: 80vh;
+  }
+  .container-content a {
+    height: 100%;
+    justify-content: center;
+    background-color: green;
   }
 
   #poketacek-learn,
   #poketacek-play {
-    height: 35vh;
+    width: 50vw;
   }
 }
-
+/* 
 @media screen and (min-width: 900px) {
   .content-container {
     height: 80vh;
@@ -36,4 +44,4 @@
 
 @media screen and (min-width: 1200px) {
 }
- */
+  */
