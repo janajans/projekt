@@ -1,7 +1,14 @@
 header {
-  display: flex;
+  display: -webkit-box;
   display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
   justify-content: space-between;
+  -webkit-align-content: center;
+  -ms-flex-line-pack: center;
   align-content: center;
   width: 100%;
   height: 10vh;
@@ -9,9 +16,10 @@ header {
 
 .header--right,
 .header--left {
-  display: flex;
+  display: -webkit-box;
   display: -webkit-flex;
-  flex-direction: row;
+  display: -ms-flexbox;
+  display: flex;
 }
 
 .header--left:first-child {
@@ -28,7 +36,13 @@ header {
 
 .wrapper {
   height: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
   align-items: center;
 }
 
@@ -76,9 +90,16 @@ header {
 
 @media screen and (min-width: 768px) {
   header {
-    display: flex;
+    display: -webkit-box;
     display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+    -ms-flex-pack: justify;
     justify-content: space-between;
+    -webkit-align-content: center;
+    -ms-flex-line-pack: center;
     align-content: center;
     height: 12vh;
   }
@@ -101,8 +122,13 @@ header {
 
   .wrapper {
     height: 100%;
-    display: flex;
+    display: -webkit-box;
     display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
     align-items: center;
   }
 }
