@@ -7,6 +7,7 @@
 }
 
 .container-content a {
+  padding: 2vh;
   display: flex;
   justify-content: center;
 }
@@ -24,24 +25,27 @@
     flex-direction: row;
     justify-content: center;
   }
+
   .container-content a {
+    padding: 0;
     height: 100%;
-    justify-content: center;
-    background-color: green;
+    width: 75vw;
+    min-width: 30vh;
+    flex-direction: row;
+    justify-content: flex-start;
   }
 
   #poketacek-learn,
   #poketacek-play {
-    width: 50vw;
+    height: 100%;
+    max-width: 420px;
   }
 }
 /* 
 @media screen and (min-width: 900px) {
-  .content-container {
-    height: 80vh;
-  }
 }
+*/
 
-@media screen and (min-width: 1200px) {
+/* @media screen and (min-width: 1200px) {
 }
-  */
+ */

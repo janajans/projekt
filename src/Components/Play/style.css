@@ -23,37 +23,25 @@
     height: 84vh;
     flex-direction: row;
     justify-content: center;
-    align-items: center;
   }
+
   .container-content a {
-    justify-content: center;
-    align-items: center;
-  }
-
-  .container-content:first-child {
+    padding: 0;
+    height: 100%;
+    width: 75vw;
+    min-width: 30vh;
     justify-content: flex-end;
-    align-items: flex-end;
-    background-color: aqua;
-  }
-
-  .container-content:last-child {
-    justify-content: center;
-    align-items: center;
   }
 
   .picture-letter-icon,
   .pexeso-icon {
-    height: 40vh;
+    height: 100%;
   }
 }
 /* 
 @media screen and (min-width: 900px) {
-  .content-container {
-    height: 80vh;
-  }
 }
+*/
+/* @media screen and (min-width: 1200px) {
 
-@media screen and (min-width: 1200px) {
-}
-
- */
+  } */
