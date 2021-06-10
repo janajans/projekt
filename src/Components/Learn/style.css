@@ -1,11 +1,12 @@
 .learn-items {
   margin: auto;
   width: 100vw;
+  height: 70vh;
 }
 
 .arrows-container {
   height: 12vh;
-  width: 100%;
+  width: 100vw;
   margin: auto;
   display: flex;
   background: cornflowerblue;
@@ -13,14 +14,15 @@
 
 #arrow-right,
 #arrow-left {
+  min-height: 0;
+  min-width: 0;
   height: 9vh;
 }
 
 .arrow-container--left,
 .arrow-container--right {
-  width: 400px;
+  width: 50%;
   display: flex;
-  flex-direction: row;
   margin: auto;
 }
 
@@ -30,4 +32,10 @@
 
 .arrow-container--right {
   justify-content: flex-start;
+}
+
+@media screen and (min-width: 768px) {
+  .arrows-container {
+    height: 10vh;
+  }
 }

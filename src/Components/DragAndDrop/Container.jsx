@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { memo } from 'react';
-import { Target } from './Target';
-import { Option } from './Option';
+import { Target } from './Target/Target';
+import { Option } from './Option/Option';
 import { randomIndexesGenerator } from '../../Util/randomIndexGenerator';
 import { ProgressBar } from '../ProgressBar';
 
@@ -27,13 +27,12 @@ export const Container = memo(function Container() {
   return (
     <>
       <ProgressBar numberOfLevels={10} currentLevel={5} />
-      <div>
-        <Target
-          onNewLevel={handleNewLevel}
-          onChange={shuffle}
-          index={indexValid}
-        />
-      </div>
+
+      <Target
+        onNewLevel={handleNewLevel}
+        onChange={shuffle}
+        index={indexValid}
+      />
 
       <div className="options-container">
         <div className="option-container">

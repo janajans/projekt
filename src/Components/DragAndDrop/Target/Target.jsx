@@ -1,8 +1,9 @@
 import React, { useState, useContext } from 'react';
-import { SoundContext } from '../../Providers/SoundContext';
+import { SoundContext } from '../../../Providers/SoundContext';
 import { useDrop } from 'react-dnd';
-import { ItemTypes } from './ItemTypes';
-import letterObjects from '../../letterObjects';
+import { ItemTypes } from '../ItemTypes';
+import letterObjects from '../../../letterObjects';
+import './styles.css';
 
 const options = {
   default: 'default',

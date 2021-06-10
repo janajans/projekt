@@ -1,11 +1,33 @@
 .container--play {
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  justify-content: space-evenly;
   align-items: center;
-  height: 84vh;
+  height: 82vh;
 }
 
 .picture-letter-icon,
 .pexeso-icon {
-  width: 40vmin;
+  height: 30vh;
 }
+
+@media screen and (min-width: 768px) {
+  .container--play {
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 80vh;
+  }
+
+  .picture-letter-icon,
+  .pexeso-icon {
+    height: 35vh;
+  }
+}
+
+/* 
+@media screen and (min-width: 1026px) {
+}
+
+*/

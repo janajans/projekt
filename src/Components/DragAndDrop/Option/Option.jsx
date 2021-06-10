@@ -1,9 +1,10 @@
 import React, { useContext } from 'react';
-import { SoundContext } from '../../Providers/SoundContext';
+import { SoundContext } from '../../../Providers/SoundContext';
 import { useDrag } from 'react-dnd';
-import { ItemTypes } from './ItemTypes';
-import letterObjects from '../../letterObjects';
-import { CustomDragLayer } from '../DragAndDrop/CustomDragLayer';
+import { ItemTypes } from '../ItemTypes';
+import letterObjects from '../../../letterObjects';
+import { CustomDragLayer } from '../CustomDragLayer';
+import './styles.css';
 
 export const Option = function Option({ index }) {
   const { soundOn } = useContext(SoundContext);

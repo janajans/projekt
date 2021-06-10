@@ -1,12 +1,10 @@
 .bar-container {
-  width: 80vw;
-  height: 3vw;
+  width: 70vw;
+  height: 8vh;
   margin: auto;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  flex-direction: row;
-  margin-bottom: 100px;
 }
 
 .bar {
