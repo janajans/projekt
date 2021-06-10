@@ -6,15 +6,32 @@ import { randomIndexesGenerator } from '../../Util/randomIndexGenerator';
 import { ProgressBar } from '../ProgressBar';
 
 export const Container = memo(function Container() {
-  const arrayOfIndexes = randomIndexesGenerator(3);
-  const [indexValid] = useState(arrayOfIndexes[0]);
-  const shuffledIndexes = arrayOfIndexes.sort(() => Math.random() - 0.5);
+  const [arrayOfIndexes, setArrayOfIndexes] = useState(
+    randomIndexesGenerator(3),
+  );
+  const [indexValid, setIndexValid] = useState(arrayOfIndexes[0]);
+  const [shuffledIndexes, setShuffledIndexes] = useState(
+    arrayOfIndexes.sort(() => Math.random() - 0.5),
+  );
+  const shuffle = () => {
+    setShuffledIndexes(arrayOfIndexes.sort(() => Math.random() - 0.5));
+  };
+
+  console.log(shuffledIndexes);
+
+  const handleNewLevel = () => {
+    setArrayOfIndexes(randomIndexesGenerator(3));
+  };
 
   return (
     <>
       <ProgressBar numberOfLevels={15} currentLevel={5} />
       <div>
-        <Target index={indexValid} />
+        <Target
+          onNewLevel={handleNewLevel}
+          onChange={shuffle}
+          index={indexValid}
+        />
       </div>
 
       <div className="options-container">

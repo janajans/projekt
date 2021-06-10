@@ -10,7 +10,7 @@ const options = {
   unsuccess: 'unsuccess',
 };
 
-export const Target = ({ index }) => {
+export const Target = ({ index, onNewLevel, onChange }) => {
   const { soundOn } = useContext(SoundContext);
   const [successful, setSuccess] = useState(options.default);
 
@@ -24,6 +24,8 @@ export const Target = ({ index }) => {
         setTimeout(() => setSuccess(options.default), 500);
       } else if (index === item.index) {
         setSuccess(options.success);
+        onNewLevel();
+        onChange();
       }
     },
   }));
