@@ -39,6 +39,7 @@ export const Target = ({ index, onNewLevel, onChange }) => {
     classname = 'target--successful';
     if (soundOn) {
       audioSuccess.play();
+      window.location.reload();
     }
   } else if (successful === options.unsuccess) {
     classname = 'target--unsuccessful';

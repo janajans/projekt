@@ -10,10 +10,10 @@ const Home = () => {
     <>
       <div className="container--home">
         <Link to="/learn">
-          <img id="poketacek-learn" src={learnPicture} alt="ikonka učit se" />
+          <img id="poketacek-learn" src={learnPicture} alt="to learn icon" />
         </Link>
         <Link to="/play">
-          <img id="poketacek-play" src={playPicture} alt="ikonka hrát si" />
+          <img id="poketacek-play" src={playPicture} alt="to play icon" />
         </Link>
       </div>
     </>

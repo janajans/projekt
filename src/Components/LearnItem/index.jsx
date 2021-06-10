@@ -16,7 +16,7 @@ const LearnItem = ({ randomIndex }) => {
         <img
           className="learning-image"
           src={letterObjects[randomIndex].picture.image}
-          alt=""
+          alt="a picture of a thing begining at the same letter as one of the letters shown under the picture"
           onClick={() => {
             setShowLetter((value) => !value);
             if (soundOn) {
@@ -28,7 +28,7 @@ const LearnItem = ({ randomIndex }) => {
           <img
             className="learning-image slide-in-left"
             src={letterObjects[randomIndex].letter.uppercase}
-            alt=""
+            alt="a letter of the Czech alphabet"
             onClick={() => {
               if (soundOn) {
                 audioLetters.play();

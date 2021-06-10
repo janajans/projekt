@@ -25,7 +25,7 @@ export const Container = memo(function Container() {
 
   return (
     <>
-      <ProgressBar numberOfLevels={15} currentLevel={5} />
+      <ProgressBar numberOfLevels={10} currentLevel={5} />
       <div>
         <Target
           onNewLevel={handleNewLevel}
