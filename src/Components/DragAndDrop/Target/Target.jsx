@@ -25,7 +25,7 @@ export const Target = ({ index }, props) => {
         setTimeout(() => setSuccess(options.default), 500);
       } else if (index === item.index) {
         setSuccess(options.success);
-        props.onChange();
+        props.onNewGame();
       }
     },
   }));

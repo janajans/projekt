@@ -12,13 +12,13 @@ const Icon_Poketacek = () => {
     '../../assets/sounds/soundsOfPoketacek/ahojVyber.mp3',
   );
   let audioCoVidis = new Audio(
-    '../../assets/sounds/soundsOfPoketacek/coVidisnaObrazkuPismenko.mp3',
+    '../../assets/sounds/soundsOfPoketacek/coVidisNaObrazku.mp3',
   );
   let audioVyberHrat = new Audio(
     '../../assets/sounds/soundsOfPoketacek/VyberSiHrat.mp3',
   );
   let audioCoKSobe = new Audio(
-    '../../assets/sounds/soundsOfPoketacek/CoKSObePatri.mp3',
+    '../../assets/sounds/soundsOfPoketacek/coKSObePatri.mp3',
   );
   let audioNaObrazek = new Audio(
     '../../assets/sounds/soundsOfPoketacek/naObrazekPismenko.mp3',
