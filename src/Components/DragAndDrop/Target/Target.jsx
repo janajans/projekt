@@ -13,6 +13,9 @@ export const options = {
 
 export const Target = ({ index, onDrop, success }) => {
   const { soundOn } = useContext(SoundContext);
+
+  const [successful, setSuccess] = useState(options.default);
+
   const [{ canDrop, isOver }, drop] = useDrop(() => ({
     accept: ItemTypes.OPTION,
     drop: (item) => onDrop(item.index),
