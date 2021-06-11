@@ -11,9 +11,13 @@ const options = {
   unsuccess: 'unsuccess',
 };
 
-export const Target = ({ index }, props) => {
+export const Target = ({ index, onShuffle } ) => {
   const { soundOn } = useContext(SoundContext);
   const [successful, setSuccess] = useState(options.default);
+
+const handleSuccess = () => {
+  onShuffle.onShuffle()
+}
 
   const [{ canDrop, isOver }, drop] = useDrop(() => ({
     accept: ItemTypes.OPTION,
@@ -25,7 +29,7 @@ export const Target = ({ index }, props) => {
         setTimeout(() => setSuccess(options.default), 500);
       } else if (index === item.index) {
         setSuccess(options.success);
-        props.onNewGame();
+        handleSuccess()
       }
     },
   }));
