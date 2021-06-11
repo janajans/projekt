@@ -12,9 +12,9 @@ const LearnItem = ({ randomIndex }) => {
 
   return (
     <>
-      <div className="container-learning">
+      <div className="container-learn__item">
         <img
-          className="learning-image"
+          className="learn-image"
           src={letterObjects[randomIndex].picture.image}
           alt="a picture of a thing begining at the same letter as one of the letters shown under the picture"
           onClick={() => {
@@ -26,7 +26,7 @@ const LearnItem = ({ randomIndex }) => {
         />
         {showLetter && (
           <img
-            className="learning-image slide-in-left"
+            className="learn-image slide-in-left"
             src={letterObjects[randomIndex].letter.uppercase}
             alt="a letter of the Czech alphabet"
             onClick={() => {
