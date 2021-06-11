@@ -10,10 +10,6 @@ const options = {
   success: 'success',
   unsuccess: 'unsuccess',
 };
-<<<<<<< HEAD
-export const Target = ({ index, onDrop, success }) => {
-  const { soundOn } = useContext(SoundContext);
-=======
 
 export const Target = ({ index, onShuffle } ) => {
   const { soundOn } = useContext(SoundContext);
@@ -23,7 +19,6 @@ const handleSuccess = () => {
   onShuffle.onShuffle()
 }
 
->>>>>>> ac670ce2c3012bff9ac76aedb2475f56622bb28c
   const [{ canDrop, isOver }, drop] = useDrop(() => ({
     accept: ItemTypes.OPTION,
     drop: (item) => onDrop(item.index),
@@ -35,12 +30,7 @@ const handleSuccess = () => {
         setTimeout(() => setSuccess(options.default), 500);
       } else if (index === item.index) {
         setSuccess(options.success);
-<<<<<<< HEAD
-        console.log('onGame ', onNewGame);
-        onNewGame();
-=======
         handleSuccess()
->>>>>>> ac670ce2c3012bff9ac76aedb2475f56622bb28c
       }
     }, */
   }));
