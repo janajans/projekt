@@ -16,7 +16,7 @@ const Learn = () => {
 
   return (
     <>
-      <div className="learn-items">
+      <div className="container-learn">
         {history[currentPosition].map((index) => {
           return <LearnItem key={index} randomIndex={index} />;
         })}
