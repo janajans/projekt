@@ -8,9 +8,9 @@
 }
 
 .learn-image {
+  max-width: 15vh;
+  max-height: 15vh;
   background-color: rgb(218, 218, 218);
-  max-width: 22vh;
-  max-height: 22vh;
   border-radius: 50%;
   margin-bottom: 2vh;
 }
@@ -61,5 +61,12 @@
  */
     transform: translateX(calc(100% - 22vh));
     opacity: 1;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .learn-image {
+    max-width: 22vh;
+    max-height: 22vh;
   }
 }
