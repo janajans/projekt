@@ -20,16 +20,16 @@ export const Container = memo(function Container() {
   console.log(shuffledIndexes);
 
   const shuffle = () => {
-    setArrayOfIndexes(randomIndexesGenerator(3));
-    setIndexValid(arrayOfIndexes[0]);
-    setShuffledIndexes(arrayOfIndexes.sort(() => Math.random() - 0.5));
-  };
+    setArrayOfIndexes(randomIndexesGenerator(3)),
+    setIndexValid(arrayOfIndexes[0]),
+    setShuffledIndexes(arrayOfIndexes.sort(() => Math.random() - 0.5))
+    }
 
   return (
     <div className="content-container">
       <ProgressBar numberOfLevels={10} currentLevel={5} />
 
-      <Target onChange={shuffle} index={indexValid} />
+      <Target onNewGame={shuffle} index={indexValid} />
 
       <div className="options-container">
         <div className="option-container">
