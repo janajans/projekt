@@ -2,7 +2,6 @@
   height: calc(100% / 3);
   width: 50vw;
   margin: auto;
-  background: rgb(175, 175, 104);
   display: flex;
   justify-content: space-between;
 }
