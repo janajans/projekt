@@ -8,11 +8,12 @@ import './style.css';
 
 export const Option = function Option({ index }) {
   const { soundOn } = useContext(SoundContext);
-  const [{ isDragging }, drag] = useDrag(() => ({
+  const [{ isDragging }, drag, dragPreview] = useDrag(() => ({
     type: ItemTypes.OPTION,
     item: { index },
 
     end: (item, monitor) => {
+      console.log('item index Drop item', item.index);
       const dropResult = monitor.getDropResult();
     },
     collect: (monitor) => ({ isDragging: monitor.isDragging() }),
@@ -25,11 +26,12 @@ export const Option = function Option({ index }) {
       {isDragging ? (
         <CustomDragLayer
           item={
-            <div className="option">
+            <div className="option" ref={dragPreview}>
               <img
                 src={letterObjects[index].letter.uppercase}
                 alt="letter in drag and drop game"
-              />
+              />{' '}
+              {index}
             </div>
           }
         />
@@ -44,6 +46,7 @@ export const Option = function Option({ index }) {
               }
             }}
           />
+          {index}
         </div>
       )}
     </>

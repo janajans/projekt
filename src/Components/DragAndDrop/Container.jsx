@@ -1,49 +1,90 @@
-import React, { useState } from 'react';
-import { memo } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Target } from './Target/Target';
 import { Option } from './Option/Option';
 import { randomIndexesGenerator } from '../../Util/randomIndexGenerator';
 import { ProgressBar } from '../ProgressBar';
+const options = {
+  default: 'default',
+  success: 'success',
+  unsuccess: 'unsuccess',
+};
+const initRandomInd = randomIndexesGenerator(3);
+/* const initShuffled =  [...initRandomInd].sort(() => Math.random() - 0.5)
+ */
 
-export const Container = memo(function Container() {
-  const [arrayOfIndexes, setArrayOfIndexes] = useState(
-    randomIndexesGenerator(3),
-  );
-  const [indexValid, setIndexValid] = useState(arrayOfIndexes[0]);
+export const Container = /* memo(function Container() */ () => {
+  const [arrayOfIndexes, setArrayOfIndexes] = useState(initRandomInd);
+  const [isSuccess, setIsSuccess] = useState(options.default);
+  const [indexValid, setIndexValid] = useState(initRandomInd[0]);
   const [shuffledIndexes, setShuffledIndexes] = useState(
-    arrayOfIndexes.sort(() => Math.random() - 0.5),
+    [...initRandomInd].sort(() => Math.floor(Math.random() * 3)),
   );
   /*   const shuffle = () => {
     setShuffledIndexes(arrayOfIndexes.sort(() => Math.random() - 0.5));
   }; */
 
-  console.log(shuffledIndexes);
+  console.log('shuffledIndexes', shuffledIndexes);
+  console.log('initRandomInd', initRandomInd);
+  /* 
+  useEffect(() => {
+    setShuffledIndexes([...arrayOfIndexes].sort(() => Math.random() - 0.5));
+  }, [indexValid]);*/
 
-  const shuffle = () => {
-    setArrayOfIndexes(randomIndexesGenerator(3)),
-    setIndexValid(arrayOfIndexes[0]),
-    setShuffledIndexes(arrayOfIndexes.sort(() => Math.random() - 0.5))
+  useEffect(() => {
+    if (indexValid !== arrayOfIndexes[0]) {
+      setIndexValid(arrayOfIndexes[0]);
+      setShuffledIndexes([...arrayOfIndexes].sort(() => Math.random() - 0.5));
     }
+  }, [arrayOfIndexes]);
 
+  useEffect(() => {
+    if (isSuccess === options.success) {
+      setTimeout(() => {
+        const randomInd = randomIndexesGenerator(3);
+        setArrayOfIndexes(randomInd);
+        console.log('randomInd: ', randomInd);
+      }, 1000);
+    }
+  }, [isSuccess]);
+
+  /* const shuffle = () => {
+    const randomInd = randomIndexesGenerator(3);
+    setArrayOfIndexes(randomInd);
+    console.log('randomInd: ', randomInd);
+ 
+    setShuffledIndexes([...randomInd].sort(() => Math.random() - 0.5));
+
+    setIndexValid(randomInd[0]);
+  }; */
+
+  console.log('valid index,', indexValid);
+  const dropHandler = (itemIndex) => {
+    console.log('item: ', indexValid, itemIndex);
+    if (indexValid !== itemIndex) {
+      setIsSuccess(options.unsuccess);
+    } else {
+      setIsSuccess(options.success);
+    }
+    setTimeout(() => setIsSuccess(options.default), 500);
+  };
   return (
     <div className="content-container">
       <ProgressBar numberOfLevels={10} currentLevel={5} />
 
-      <Target onNewGame={shuffle} index={indexValid} />
+      <Target
+        key={indexValid}
+        onDrop={/* () =>  */ dropHandler}
+        index={indexValid}
+        success={isSuccess}
+      />
 
       <div className="options-container">
-        <div className="option-container">
-          <Option index={shuffledIndexes[0]} />
-        </div>
-
-        <div className="option-container">
-          <Option index={shuffledIndexes[1]} />
-        </div>
-
-        <div className="option-container">
-          <Option index={shuffledIndexes[2]} />
-        </div>
+        {shuffledIndexes.map((index) => (
+          <div key={index} className="option-container">
+            <Option index={index} />
+          </div>
+        ))}
       </div>
     </div>
   );
-});
+};

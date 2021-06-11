@@ -10,24 +10,23 @@ const options = {
   success: 'success',
   unsuccess: 'unsuccess',
 };
-
-export const Target = ({ index }, props) => {
+export const Target = ({ index, onDrop, success }) => {
   const { soundOn } = useContext(SoundContext);
-  const [successful, setSuccess] = useState(options.default);
-
   const [{ canDrop, isOver }, drop] = useDrop(() => ({
     accept: ItemTypes.OPTION,
-    drop: (item) => {
-      console.log(item);
+    drop: (item) => onDrop(item.index),
+    /*   drop: (item) => {
+      console.log('item: ', index, item.index);
 
       if (index !== item.index) {
         setSuccess(options.unsuccess);
         setTimeout(() => setSuccess(options.default), 500);
       } else if (index === item.index) {
         setSuccess(options.success);
-        props.onNewGame();
+        console.log('onGame ', onNewGame);
+        onNewGame();
       }
-    },
+    }, */
   }));
   let classname = '';
 
@@ -35,20 +34,18 @@ export const Target = ({ index }, props) => {
   let audioSuccess = new Audio('../../assets/sounds/success.wav');
   let audioPictures = new Audio(letterObjects[index].picture.sound);
 
-  if (successful === options.success) {
+  if (success === options.success) {
     classname = 'target--successful';
 
     if (soundOn) {
       audioSuccess.play();
     }
-  } else if (successful === options.unsuccess) {
+  } else if (success === options.unsuccess) {
     classname = 'target--unsuccessful';
     if (soundOn) {
       audioFailure.play();
     }
   }
-
-  console.log(classname);
 
   return (
     <div ref={drop} className="target">
@@ -62,6 +59,7 @@ export const Target = ({ index }, props) => {
           }
         }}
       />
+      {index}
     </div>
   );
 };
