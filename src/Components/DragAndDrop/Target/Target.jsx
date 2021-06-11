@@ -11,7 +11,7 @@ const options = {
   unsuccess: 'unsuccess',
 };
 
-export const Target = ({ index, onNewLevel, onChange }) => {
+export const Target = ({ index }, props) => {
   const { soundOn } = useContext(SoundContext);
   const [successful, setSuccess] = useState(options.default);
 
@@ -25,8 +25,7 @@ export const Target = ({ index, onNewLevel, onChange }) => {
         setTimeout(() => setSuccess(options.default), 500);
       } else if (index === item.index) {
         setSuccess(options.success);
-        onNewLevel();
-        onChange();
+        props.onChange();
       }
     },
   }));
@@ -38,9 +37,9 @@ export const Target = ({ index, onNewLevel, onChange }) => {
 
   if (successful === options.success) {
     classname = 'target--successful';
+
     if (soundOn) {
       audioSuccess.play();
-      window.location.reload();
     }
   } else if (successful === options.unsuccess) {
     classname = 'target--unsuccessful';
