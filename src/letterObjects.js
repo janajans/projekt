@@ -176,7 +176,7 @@ const letterObjects = [
     },
     picture: {
       image: './assets/images/lodicka.svg',
-      sound: './assets/sounds/soundsOfPictures/lodicka.mp3',
+      sound: './assets/sounds/soundsOfPictures/lod.mp3',
     },
   },
   {
@@ -200,7 +200,7 @@ const letterObjects = [
     },
     picture: {
       image: './assets/images/noty.svg',
-      sound: './assets/sounds/soundsOfPictures/noty.mp3',
+      sound: './assets/sounds/soundsOfPictures/nota.mp3',
     },
   },
   {
