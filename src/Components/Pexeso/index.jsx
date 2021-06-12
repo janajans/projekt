@@ -77,7 +77,7 @@ const Pexeso = () => {
 
   return (
     <>
-      <div className="container-pexeso">
+      <div className="container-content--pexeso">
         <div className="pexeso-images">
           {randomIndexes.map((index) => {
             const selected = index === selectedImage;
