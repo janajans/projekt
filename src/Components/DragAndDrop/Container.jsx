@@ -69,7 +69,7 @@ export const Container = /* memo(function Container() */ () => {
   };
   return (
     <div className="content-container">
-      <ProgressBar numberOfLevels={10} currentLevel={5} />
+      {/* <ProgressBar numberOfLevels={10} currentLevel={5} /> */}
 
       <Target
         key={indexValid}

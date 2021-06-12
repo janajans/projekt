@@ -30,6 +30,11 @@ export const Option = function Option({ index }) {
               <img
                 src={letterObjects[index].letter.uppercase}
                 alt="letter in drag and drop game"
+                onClick={() => {
+                  if (soundOn) {
+                    audioLetters.play();
+                  }
+                }}
               />
             </div>
           }
