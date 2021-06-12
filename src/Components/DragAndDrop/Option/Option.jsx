@@ -46,7 +46,6 @@ export const Option = function Option({ index }) {
               }
             }}
           />
-          {index}
         </div>
       )}
     </>
