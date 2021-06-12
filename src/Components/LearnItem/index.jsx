@@ -16,12 +16,15 @@ const LearnItem = ({ randomIndex }) => {
         <img
           className="learn-image"
           src={letterObjects[randomIndex].picture.image}
-          alt="a picture of a thing begining at the same letter as one of the letters shown under the picture"
+          alt="a picture of a thing beginning with the same letter as one of the letters shown under the picture"
           onClick={() => {
             setShowLetter((value) => !value);
             if (soundOn) {
               audioPictures.play();
             }
+            setTimeout(() => {
+              setShowLetter(false);
+            }, 4000);
           }}
         />
         {showLetter && (
@@ -32,9 +35,6 @@ const LearnItem = ({ randomIndex }) => {
             onClick={() => {
               if (soundOn) {
                 audioLetters.play();
-                setTimeout(() => {
-                  setShowLetter(false);
-                }, 8000);
               }
             }}
           />
