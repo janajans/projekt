@@ -3,32 +3,17 @@ import { Target } from './Target/Target';
 import { Option } from './Option/Option';
 import { randomIndexesGenerator } from '../../Util/randomIndexGenerator';
 import { ProgressBar } from '../ProgressBar';
-const options = {
-  default: 'default',
-  success: 'success',
-  unsuccess: 'unsuccess',
-};
-const initRandomInd = randomIndexesGenerator(3);
-/* const initShuffled =  [...initRandomInd].sort(() => Math.random() - 0.5)
- */
+import { options } from './Target/Target';
 
-export const Container = /* memo(function Container() */ () => {
+const initRandomInd = randomIndexesGenerator(3);
+
+export const Container = () => {
   const [arrayOfIndexes, setArrayOfIndexes] = useState(initRandomInd);
   const [isSuccess, setIsSuccess] = useState(options.default);
   const [indexValid, setIndexValid] = useState(initRandomInd[0]);
   const [shuffledIndexes, setShuffledIndexes] = useState(
     [...initRandomInd].sort(() => Math.floor(Math.random() * 3)),
   );
-  /*   const shuffle = () => {
-    setShuffledIndexes(arrayOfIndexes.sort(() => Math.random() - 0.5));
-  }; */
-
-  // console.log('shuffledIndexes', shuffledIndexes);
-  // console.log('initRandomInd', initRandomInd);
-  /* 
-  useEffect(() => {
-    setShuffledIndexes([...arrayOfIndexes].sort(() => Math.random() - 0.5));
-  }, [indexValid]);*/
 
   useEffect(() => {
     if (indexValid !== arrayOfIndexes[0]) {
@@ -42,7 +27,6 @@ export const Container = /* memo(function Container() */ () => {
       setTimeout(() => {
         const randomInd = randomIndexesGenerator(3);
         setArrayOfIndexes(randomInd);
-        // console.log('randomInd: ', randomInd);
       }, 1000);
     }
   }, [isSuccess]);
@@ -69,7 +53,7 @@ export const Container = /* memo(function Container() */ () => {
 
       <Target
         key={indexValid}
-        onDrop={/* () =>  */ dropHandler}
+        onDrop={dropHandler}
         index={indexValid}
         success={isSuccess}
       />
