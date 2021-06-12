@@ -105,7 +105,7 @@ header {
     /*   -webkit-align-content: center;
     -ms-flex-line-pack: center; */
     align-content: center;
-    height: calc(var(--vh, 1vh) * 10);
+    height: 10vh;
     padding: 0 1rem;
   }
 

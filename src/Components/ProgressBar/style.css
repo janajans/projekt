@@ -1,10 +1,11 @@
 .bar-container {
   width: 70vw;
+  max-width: 500px;
   height: 6vh;
-  margin: auto;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  background-color: tomato;
 }
 
 .bar {

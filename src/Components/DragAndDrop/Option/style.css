@@ -1,22 +1,23 @@
 .options-container {
-  height: 36vh;
+  background-color: turquoise;
+  height: 35vh;
   width: 100vw;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  align-content: flex-start;
 }
 
 .option-container {
   width: 40vw;
-  height: calc(32vh / 2);
+  height: 50%;
   display: flex;
   justify-content: space-around;
 }
 
 .option {
-  height: calc(32vh / 2);
-  width: calc(32vh / 2);
+  height: 100%;
+  margin: auto;
+  flex-grow: 1;
   display: flex;
   align-items: center;
   justify-content: center;

@@ -1,15 +1,16 @@
 .target {
   display: flex;
-  height: 40vh;
   width: 100vw;
+  height: 40vh;
   justify-content: center;
   align-items: center;
+  background-color: pink;
 }
 
 .target img {
   min-width: 0;
   min-height: 0;
-  height: 85%;
+  height: 90%;
   border-radius: 50%;
 }
 

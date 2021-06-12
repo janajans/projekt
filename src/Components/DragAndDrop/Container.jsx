@@ -47,19 +47,7 @@ export const Container = /* memo(function Container() */ () => {
     }
   }, [isSuccess]);
 
-  /* const shuffle = () => {
-    const randomInd = randomIndexesGenerator(3);
-    setArrayOfIndexes(randomInd);
-    console.log('randomInd: ', randomInd);
- 
-    setShuffledIndexes([...randomInd].sort(() => Math.random() - 0.5));
-
-    setIndexValid(randomInd[0]);
-  }; */
-
-  // console.log('valid index,', indexValid);
   const dropHandler = (itemIndex) => {
-    // console.log('item: ', indexValid, itemIndex);
     if (indexValid !== itemIndex) {
       setIsSuccess(options.unsuccess);
     } else {
@@ -68,8 +56,8 @@ export const Container = /* memo(function Container() */ () => {
     setTimeout(() => setIsSuccess(options.default), 500);
   };
   return (
-    <div className="content-container">
-      {/* <ProgressBar numberOfLevels={10} currentLevel={5} /> */}
+    <div className="container-content--dnd">
+      <ProgressBar numberOfLevels={10} currentLevel={5} />
 
       <Target
         key={indexValid}
