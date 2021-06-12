@@ -13,11 +13,14 @@
 .pexeso-letters {
   display: flex;
   flex-direction: column;
+  width: 30vw;
+  margin: 5px;
+  max-width: 170px;
 }
 
 .pexeso-item {
-  width: 15vh;
-  height: 15vh;
+  width: 100%;
+  height: calc(100% / 3);
   background-color: rgb(218, 218, 218);
   margin: 5px;
   border-radius: 7px;
@@ -134,31 +137,41 @@
 }
 
 @media screen and (min-width: 650px) {
+  .pexeso-images,
+  .pexeso-letters {
+    max-height: 600px;
+    margin: 5px;
+  }
+
   .pexeso-item {
-    width: 15vh;
-    height: 15vh;
+    width: 100%;
+    height: calc(100% / 3);
+    background-color: rgb(218, 218, 218);
+    border-radius: 7px;
+    margin: 5px;
+  }
+}
+
+@media screen and (min-width: 900px) {
+  .pexeso-images,
+  .pexeso-letters {
+    max-height: none;
+    width: 60vw;
+    max-width: 700px;
+    flex-direction: row;
+    margin-bottom: 5px;
+  }
+
+  .pexeso-item {
+    width: calc(100% / 3);
+    height: 100%;
+    margin: 0px;
+    margin: 0 5px;
+  }
+  .container-content--pexeso {
+    flex-direction: column;
   }
 }
 
 @media screen and (min-width: 1200px) {
-  .container-pexeso {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    height: 84vh;
-  }
-  .pexeso-images,
-  .pexeso-letters {
-    display: flex;
-    flex-direction: row;
-  }
-  .pexeso-item {
-    width: 20vh;
-    height: 20vh;
-    /* padding: 10px; */
-    background-color: rgb(218, 218, 218);
-    margin: 5px;
-    border-radius: 7px;
-  }
 }
