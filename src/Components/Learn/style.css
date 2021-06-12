@@ -1,19 +1,28 @@
-.container-learn {
+.container-content--learn {
   margin: auto;
-  width: 100vw;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  background-color: blue;
+}
+
+.container-learn {
   height: 70vh;
+  width: 100vw;
+  background-color: pink;
 }
 
 .arrows-container {
   height: 12vh;
   width: 100vw;
-  margin: auto;
   display: flex;
+  background-color: yellow;
 }
 
 #arrow-right,
 #arrow-left {
   min-height: 0;
+  margin: 0 1rem;
   min-width: 0;
   height: 9vh;
 }

@@ -13,6 +13,11 @@ import Pexeso from './Components/Pexeso';
 import Play from './Components/Play';
 import Learn from './Components/Learn';
 
+window.addEventListener('resize', () => {
+  let vh = window.innerHeight * 0.01;
+  document.documentElement.style.setProperty('--vh', `${vh}px`);
+});
+
 const App = () => (
   <SoundProvider>
     <Router>

@@ -1,6 +1,7 @@
 header {
-  height: 7vh;
+  height: calc(var(--vh, 1vh) * 7);
   width: 100vw;
+  background-color: red;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -95,7 +96,7 @@ header {
     /*   -webkit-align-content: center;
     -ms-flex-line-pack: center; */
     align-content: center;
-    height: 10vh;
+    height: calc(var(--vh, 1vh) * 10);
     padding: 0 1rem;
   }
 

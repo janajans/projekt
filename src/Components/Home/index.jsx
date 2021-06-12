@@ -8,7 +8,7 @@ import './style.css';
 const Home = () => {
   return (
     <>
-      <div className="container-content">
+      <div className="container-content--home">
         <Link to="/learn">
           <img id="poketacek-learn" src={learnPicture} alt="to learn icon" />
         </Link>
