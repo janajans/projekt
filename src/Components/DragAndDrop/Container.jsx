@@ -55,9 +55,17 @@ export const Container = /* memo(function Container() */ () => {
     }
     setTimeout(() => setIsSuccess(options.default), 500);
   };
+
+  let currentLevel = 5;
+  let numberOfLevels = 5;
+
   return (
     <div className="container-content--dnd">
-      <ProgressBar numberOfLevels={10} currentLevel={5} />
+      <ProgressBar
+        numberOfLevels={numberOfLevels}
+        currentLevel={currentLevel}
+        key={currentLevel}
+      />
 
       <Target
         key={indexValid}

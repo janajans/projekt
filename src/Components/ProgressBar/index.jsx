@@ -15,8 +15,8 @@ export const ProgressBar = ({ numberOfLevels, currentLevel }) => {
   console.log(classes);
   return (
     <div className="bar-container">
-      {classes.map((bar) => (
-        <div className={bar}></div>
+      {classes.map((bar, id) => (
+        <div key={id} className={bar}></div>
       ))}
     </div>
   );
