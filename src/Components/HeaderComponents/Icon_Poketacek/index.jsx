@@ -59,6 +59,13 @@ const Icon_Poketacek = () => {
           }
         }}
       />
+      {/* <object
+        type="image/svg+xml"
+        data={icon_poketacek}
+        style={{ width: '50px' }}
+      >
+        svg-animation
+      </object> */}
     </div>
   );
 };
