@@ -1,16 +1,15 @@
 .target {
   display: flex;
-  width: 100vw;
-  height: 40vh;
+  width: 70vw;
   justify-content: center;
   align-items: center;
-  background-color: pink;
 }
 
 .target img {
   min-width: 0;
   min-height: 0;
   height: 90%;
+  max-height: 330px;
   border-radius: 50%;
 }
 
@@ -69,13 +68,3 @@
     transform: translate(1px, -2px) rotate(-1deg);
   }
 }
-
-/* 
-@media screen and (min-width: 768px) {
-} */
-
-/* 
-@media screen and (min-width: 1026px) {
-}
-
-*/
