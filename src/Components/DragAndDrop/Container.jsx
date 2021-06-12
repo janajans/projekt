@@ -23,8 +23,8 @@ export const Container = /* memo(function Container() */ () => {
     setShuffledIndexes(arrayOfIndexes.sort(() => Math.random() - 0.5));
   }; */
 
-  console.log('shuffledIndexes', shuffledIndexes);
-  console.log('initRandomInd', initRandomInd);
+  // console.log('shuffledIndexes', shuffledIndexes);
+  // console.log('initRandomInd', initRandomInd);
   /* 
   useEffect(() => {
     setShuffledIndexes([...arrayOfIndexes].sort(() => Math.random() - 0.5));
@@ -42,7 +42,7 @@ export const Container = /* memo(function Container() */ () => {
       setTimeout(() => {
         const randomInd = randomIndexesGenerator(3);
         setArrayOfIndexes(randomInd);
-        console.log('randomInd: ', randomInd);
+        // console.log('randomInd: ', randomInd);
       }, 1000);
     }
   }, [isSuccess]);
@@ -57,9 +57,9 @@ export const Container = /* memo(function Container() */ () => {
     setIndexValid(randomInd[0]);
   }; */
 
-  console.log('valid index,', indexValid);
+  // console.log('valid index,', indexValid);
   const dropHandler = (itemIndex) => {
-    console.log('item: ', indexValid, itemIndex);
+    // console.log('item: ', indexValid, itemIndex);
     if (indexValid !== itemIndex) {
       setIsSuccess(options.unsuccess);
     } else {

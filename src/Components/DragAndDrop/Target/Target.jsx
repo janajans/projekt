@@ -28,7 +28,6 @@ export const Target = ({ index, onDrop, success }) => {
 
   if (success === options.success) {
     classname = 'target--successful';
-
     if (soundOn) {
       audioSuccess.play();
     }
