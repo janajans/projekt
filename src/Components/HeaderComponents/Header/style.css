@@ -18,6 +18,10 @@ header {
   min-height: 0;
 }
 
+.header-link-container {
+  height: 100%;
+}
+
 .header--right,
 .header--left {
   height: 100%;
