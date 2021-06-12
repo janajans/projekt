@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 
 const Icon_Home = () => (
   <>
-    <Link to="/">
+    <Link to="/" className="header-link-container">
       <div className="wrapper">
         <img className="header-icon" src={icon_home} alt="home icon" />
       </div>

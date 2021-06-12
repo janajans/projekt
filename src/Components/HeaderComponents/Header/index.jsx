@@ -24,7 +24,7 @@ const Header = () => {
           {showRestartAndGameIcon && (
             <>
               <Icon_Restart />
-              <Link to="/play">
+              <Link to="/play" className="header-link-container">
                 <Icon_PlayOptions />
               </Link>
             </>

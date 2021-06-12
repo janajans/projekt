@@ -1,48 +1,61 @@
-.container-content {
-  height: 88vh;
+.container-content--play {
+  margin: auto;
+  width: 100%;
+  height: 100%;
+  flex-grow: 1;
   display: flex;
   flex-direction: column;
+  align-items: center;
   justify-content: center;
-  width: 100vw;
 }
 
-.container-content a {
-  padding: 2vh;
+.container-content--play a {
+  padding: 2vh 0;
+  width: 70vw;
+  height: 40vh;
+  max-width: 60vh;
+  max-height: 40vh;
   display: flex;
   justify-content: center;
+  align-items: flex-start;
 }
 
 .picture-letter-icon,
 .pexeso-icon {
-  height: 30vh;
   min-width: 0;
   min-height: 0;
+  width: 90%;
+  height: 90%;
 }
 
 @media screen and (min-width: 650px) {
-  .container-content {
-    height: 84vh;
+  .container-content--play {
     flex-direction: row;
     justify-content: center;
+    align-items: center;
   }
 
-  .container-content a {
-    padding: 0;
-    height: 100%;
-    width: 75vw;
-    min-width: 30vh;
+  .container-content--play a {
+    padding: 0 3rem;
+    width: 45vw;
+    height: 60vh;
+    max-width: 60vh;
+    max-height: 60vh;
     flex-direction: row;
-    justify-content: flex-start;
+    justify-content: flex-end;
+    align-items: center;
   }
 
-  .container-content a:first-child {
-    justify-content: flex-end;
+  .container-content--play a:nth-child(2) {
+    justify-content: flex-start;
   }
 
   .picture-letter-icon,
   .pexeso-icon {
-    height: 100%;
-    max-width: 420px;
+    max-width: 400px;
+    max-height: 400px;
+    width: 80%;
+    height: 80%;
   }
 }
 /* 

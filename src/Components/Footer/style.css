@@ -1,12 +1,19 @@
 footer {
+  /*   height: calc(var(--vh, 1vh) * 5);
+ */
   height: 5vh;
-  background-color: aqua;
-  width: 100vw;
+  font-size: 0.75rem;
+
   color: #242422;
   display: flex;
   justify-content: flex-end;
   align-items: center;
   padding: 0 0.5rem;
+  margin: auto 0;
+}
+
+.footer-container {
+  display: inline-block;
 }
 
 a {
@@ -18,8 +25,8 @@ a {
 @media screen and (min-width: 650px) {
   footer {
     height: 6vh;
-
+    width: 100%;
     padding: 0 1rem;
-    font-size: 1.15rem;
+    font-size: 1rem;
   }
 }
