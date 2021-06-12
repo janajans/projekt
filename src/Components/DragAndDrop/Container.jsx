@@ -6,10 +6,12 @@ import { ProgressBar } from '../ProgressBar';
 import { options } from './Target/Target';
 
 const initRandomInd = randomIndexesGenerator(3);
+let numberOfLevels = 10;
 
 export const Container = () => {
   const [arrayOfIndexes, setArrayOfIndexes] = useState(initRandomInd);
   const [isSuccess, setIsSuccess] = useState(options.default);
+  const [currentLevel, setCurrentLevel] = useState(0);
   const [indexValid, setIndexValid] = useState(initRandomInd[0]);
   const [shuffledIndexes, setShuffledIndexes] = useState(
     [...initRandomInd].sort(() => Math.floor(Math.random() * 3)),
@@ -34,14 +36,13 @@ export const Container = () => {
   const dropHandler = (itemIndex) => {
     if (indexValid !== itemIndex) {
       setIsSuccess(options.unsuccess);
+      console.log('currentLevel: ', currentLevel);
     } else {
       setIsSuccess(options.success);
+      setCurrentLevel(currentLevel + 1);
     }
     setTimeout(() => setIsSuccess(options.default), 500);
   };
-
-  let currentLevel = 5;
-  let numberOfLevels = 5;
 
   return (
     <div className="container-content--dnd">
