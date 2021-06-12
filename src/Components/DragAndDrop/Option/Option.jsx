@@ -31,7 +31,6 @@ export const Option = function Option({ index }) {
                 src={letterObjects[index].letter.uppercase}
                 alt="letter in drag and drop game"
               />
-              {index}
             </div>
           }
         />

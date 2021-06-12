@@ -51,7 +51,6 @@ export const Target = ({ index, onDrop, success }) => {
           }
         }}
       />
-      {index}
     </div>
   );
 };
