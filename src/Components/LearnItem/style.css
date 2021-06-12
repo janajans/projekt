@@ -1,66 +1,60 @@
-/* .container-learn__item {
-  height: calc(100% / 3);
-  width: 50vw;
-  margin: auto;
-  display: flex;
-  justify-content: space-between;
-}
- */
 .learn-image {
-  max-width: 15vh;
-  max-height: 15vh;
-  max-width: 45%;
+  width: 15vh;
+  height: 15vh;
   background-color: rgb(218, 218, 218);
   border-radius: 50%;
   margin-bottom: 2vh;
 }
 
-/* @-webkit-keyframes slide-in-top {
-  0% {
-    -webkit-transform: translateY(25vh);
-    transform: translateY(25vh);
-    opacity: 0;
-  }
-  100% {
-    -webkit-transform: translateY(35vh);
-    transform: translateY(35vh);
-
-    opacity: 1;
-  }
-}
-@keyframes slide-in-top {
-  0% {
-    -webkit-transform: translateY(25vh);
-    transform: translateY(25vh);
-    opacity: 0;
-  }
-  100% {
-    -webkit-transform: translateY(35vh);
-    transform: translateY(35vh);
-    opacity: 1;
-  }
-} */
-
 .slide-in-left {
-  /*   -webkit-animation: slide-in-left 10s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
- */
-  animation: slide-in-left 2s /* cubic-bezier(0.25, 0.46, 0.45, 0.94) both */;
-  /*   transform-box: border-box;
- */
+  animation: narrow 2s;
 }
 
-@keyframes slide-in-left {
+@keyframes narrow {
   0% {
     /*     -webkit-transform: translateX(20vw);
  */
-    transform: translateX(-30vh);
-    opacity: 0.6;
+    transform: translateX(-15vh);
+    opacity: 0;
   }
   50% {
     /*     -webkit-transform: translateX(30vw);
  */
-    transform: translateX(calc(100% - 15vh));
+    transform: translateX(calc(100%-15vh));
     opacity: 1;
+  }
+}
+
+@media screen and (min-width: 470px) {
+  .learn-image {
+    width: 20vh;
+    height: 20vh;
+    background-color: rgb(218, 218, 218);
+    border-radius: 50%;
+    margin-bottom: 2vh;
+  }
+
+  .slide-in-left {
+    /*   -webkit-animation: slide-in-left 10s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+ */
+    animation: wide 2s /* cubic-bezier(0.25, 0.46, 0.45, 0.94) both */;
+    /*   transform-box: border-box;
+ */
+  }
+
+  @keyframes wide {
+    0% {
+      /*     -webkit-transform: translateX(20vw);
+ */
+      transform: translateX(-20vh);
+      opacity: 0;
+    }
+    50% {
+      /*     -webkit-transform: translateX(30vw);
+ */
+      transform: translateX(calc(100% - 20vh));
+      opacity: 1;
+    }
   }
 }
 
