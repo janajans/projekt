@@ -36,20 +36,24 @@
   }
 
   .container-content--play a {
-    padding: 0;
+    padding: 0 3rem;
     width: 45vw;
     height: 60vh;
     max-width: 60vh;
     max-height: 60vh;
     flex-direction: row;
-    justify-content: flex-start;
+    justify-content: flex-end;
     align-items: center;
+  }
+
+  .container-content--play a:nth-child(2) {
+    justify-content: flex-start;
   }
 
   .picture-letter-icon,
   .pexeso-icon {
-    max-width: 600px;
-    max-height: 600px;
+    max-width: 400px;
+    max-height: 400px;
     width: 80%;
     height: 80%;
   }
