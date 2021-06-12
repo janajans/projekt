@@ -7,7 +7,7 @@ import './style.css';
 const Play = () => {
   return (
     <>
-      <div className="container-content">
+      <div className="container-content--play">
         <Link to="/dragdrop">
           <img
             className="picture-letter-icon"
