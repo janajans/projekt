@@ -1,6 +1,7 @@
 .target {
   display: flex;
-  width: 70vw;
+  height: 30vh;
+  min-width: 70vw;
   justify-content: center;
   align-items: center;
 }
