@@ -66,11 +66,11 @@ const Pexeso = () => {
     }
   }, [selectedLetter, selectedImage]);
 
-  let audioApplause = new Audio('../../assets/sounds/applause.mp3');
+  // let audioApplause = new Audio('../../assets/sounds/applause.mp3');
   useEffect(() => {
-    if (soundOn && correctPairs.length === 3) {
-      audioApplause.play();
-    }
+    // if (soundOn && correctPairs.length === 3) {
+    //   audioApplause.play();
+    // }
     if (correctPairs.length === 3) {
       setCurrentLevel(currentLevel + 1);
       setTimeout(() => {
@@ -78,7 +78,7 @@ const Pexeso = () => {
         setRandomIndexes(newRandomIndexes);
         setShufledIndexes(shuffle(newRandomIndexes));
         setCorrectPairs([]);
-      }, 3200);
+      }, 1000);
     }
   }, [correctPairs]);
 
