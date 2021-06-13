@@ -9,11 +9,9 @@ export const randomIndexesGenerator = (i) => {
 
   while (arrayOfIndexes.length < i) {
     const index = randomNumber();
-    console.log(index);
     if (!arrayOfIndexes.includes(index)) {
       arrayOfIndexes.push(index);
     }
   }
-  console.log(arrayOfIndexes);
   return arrayOfIndexes;
 };

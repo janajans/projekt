@@ -6,14 +6,13 @@ import letterObjects from '../../../letterObjects';
 import { CustomDragLayer } from '../CustomDragLayer';
 import './style.css';
 
-export const Option = function Option({ index }) {
+export const Option = ({ index }) => {
   const { soundOn } = useContext(SoundContext);
   const [{ isDragging }, drag, dragPreview] = useDrag(() => ({
     type: ItemTypes.OPTION,
     item: { index },
 
     end: (item, monitor) => {
-      console.log('item index Drop item', item.index);
       const dropResult = monitor.getDropResult();
     },
     collect: (monitor) => ({ isDragging: monitor.isDragging() }),

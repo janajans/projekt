@@ -10,10 +10,10 @@
 .bar {
   height: 3px;
   flex-grow: 1;
-  background-color: rgb(255, 255, 255);
+  background-color: rgb(225, 225, 225);
   border-left: solid 10px white;
 }
 
 .bar-done {
-  background-color: black;
+  background-color: #242422;
 }
