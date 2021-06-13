@@ -160,6 +160,7 @@
     /* max-height: none; */
     width: 60vw;
     max-width: 700px;
+    display: flex;
     flex-direction: row;
     margin-bottom: 5px;
   }
