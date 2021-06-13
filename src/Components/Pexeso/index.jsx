@@ -4,6 +4,10 @@ import letterObjects from '../../letterObjects';
 import { randomIndexesGenerator } from '../../Util/randomIndexGenerator';
 import './style.css';
 import { shuffledIndexes as shuffle } from '../../Util/arrayShuffler';
+import { ProgressBar } from '../ProgressBar';
+import WinningPage from '../WinningPage';
+
+let numberOfLevels = 4;
 
 const Pexeso = () => {
   const { soundOn } = useContext(SoundContext);
@@ -14,6 +18,8 @@ const Pexeso = () => {
   const [correctPairs, setCorrectPairs] = useState([]);
   const [wrongLetter, setWrongLetter] = useState(null);
   const [wrongImage, setWrongImage] = useState(null);
+
+  const [currentLevel, setCurrentLevel] = useState(0);
 
   useEffect(() => {
     setShufledIndexes(shuffle(randomIndexes));
@@ -66,6 +72,7 @@ const Pexeso = () => {
       audioApplause.play();
     }
     if (correctPairs.length === 3) {
+      setCurrentLevel(currentLevel + 1);
       setTimeout(() => {
         const newRandomIndexes = randomIndexesGenerator(3);
         setRandomIndexes(newRandomIndexes);
@@ -75,75 +82,85 @@ const Pexeso = () => {
     }
   }, [correctPairs]);
 
-  return (
-    <>
-      <div className="container-content--pexeso">
-        <div className="pexeso-images">
-          {randomIndexes.map((index) => {
-            const selected = index === selectedImage;
-            const paired = correctPairs.includes(index);
-            const wrong = wrongImage === index;
-            const successful = correctPairs.length === 3;
-            let className = 'pexeso-item';
-            if (selected) {
-              className += ' pexeso-item-selected';
-            } else if (paired) {
-              className += ' pexeso-item-paired';
-            } else if (wrong) {
-              className += ' pexeso-item-wrong';
-            }
-            if (successful) {
-              className += ' pexeso-item-successful';
-            }
-            return (
-              <img
-                className={className}
-                src={letterObjects[index].picture.image}
-                alt="pexeso game card showing a picture"
-                key={index}
-                onClick={() => {
-                  if (!paired) {
-                    setSelectedImage(index);
-                  }
-                }}
-              />
-            );
-          })}
+  if (currentLevel < numberOfLevels) {
+    return (
+      <>
+        <div className="container-content--pexeso">
+          <ProgressBar
+            numberOfLevels={numberOfLevels}
+            currentLevel={currentLevel}
+            key={currentLevel}
+          />
+          <div className="pexeso-images">
+            {randomIndexes.map((index) => {
+              const selected = index === selectedImage;
+              const paired = correctPairs.includes(index);
+              const wrong = wrongImage === index;
+              const successful = correctPairs.length === 3;
+              let className = 'pexeso-item';
+              if (selected) {
+                className += ' pexeso-item-selected';
+              } else if (paired) {
+                className += ' pexeso-item-paired';
+              } else if (wrong) {
+                className += ' pexeso-item-wrong';
+              }
+              if (successful) {
+                className += ' pexeso-item-successful';
+              }
+              return (
+                <img
+                  className={className}
+                  src={letterObjects[index].picture.image}
+                  alt="pexeso game card showing a picture"
+                  key={index}
+                  onClick={() => {
+                    if (!paired) {
+                      setSelectedImage(index);
+                    }
+                  }}
+                />
+              );
+            })}
+          </div>
+          <div className="pexeso-letters">
+            {shuffledIndexes.map((index) => {
+              const selected = index === selectedLetter;
+              const paired = correctPairs.includes(index);
+              const wrong = wrongLetter === index;
+              const successful = correctPairs.length === 3;
+              let className = 'pexeso-item';
+              if (selected) {
+                className += ' pexeso-item-selected';
+              } else if (paired) {
+                className += ' pexeso-item-paired';
+              } else if (wrong) {
+                className += ' pexeso-item-wrong';
+              }
+              if (successful) {
+                className += ' pexeso-item-successful';
+              }
+              return (
+                <img
+                  className={className}
+                  src={letterObjects[index].letter.uppercase}
+                  alt="pexeso game card showing a letter"
+                  key={index}
+                  onClick={() => {
+                    if (!paired) {
+                      setSelectedLetter(index);
+                    }
+                  }}
+                />
+              );
+            })}
+          </div>
         </div>
-        <div className="pexeso-letters">
-          {shuffledIndexes.map((index) => {
-            const selected = index === selectedLetter;
-            const paired = correctPairs.includes(index);
-            const wrong = wrongLetter === index;
-            const successful = correctPairs.length === 3;
-            let className = 'pexeso-item';
-            if (selected) {
-              className += ' pexeso-item-selected';
-            } else if (paired) {
-              className += ' pexeso-item-paired';
-            } else if (wrong) {
-              className += ' pexeso-item-wrong';
-            }
-            if (successful) {
-              className += ' pexeso-item-successful';
-            }
-            return (
-              <img
-                className={className}
-                src={letterObjects[index].letter.uppercase}
-                alt="pexeso game card showing a letter"
-                key={index}
-                onClick={() => {
-                  if (!paired) {
-                    setSelectedLetter(index);
-                  }
-                }}
-              />
-            );
-          })}
-        </div>
-      </div>
-    </>
-  );
+      </>
+    );
+  } else {
+    return <WinningPage />;
+  }
 };
+
 export default Pexeso;
