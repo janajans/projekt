@@ -21,5 +21,3 @@ const Home = () => {
 };
 
 export default Home;
-
-// //  <Header><Zvuk><OdkazNaHome><Restart onRestart={handleRestart}></Header>
