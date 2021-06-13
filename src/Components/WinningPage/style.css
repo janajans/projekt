@@ -1,0 +1,28 @@
+.content-containter--winning {
+  margin: auto;
+  width: 100%;
+  height: 100%;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.poketacek-animated {
+  min-width: 0;
+  min-height: 0;
+  width: 70vw;
+  height: 40vw;
+  max-width: 60vh;
+  max-height: 40vh;
+}
+
+@media screen and (min-width: 650px) {
+  .poketacek-animated {
+    width: 45vw;
+    height: 60vh;
+    max-width: 400px;
+    max-height: 400px;
+  }
+}

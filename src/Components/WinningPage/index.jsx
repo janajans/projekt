@@ -12,13 +12,13 @@ const WinningPage = () => {
   }
 
   return (
-    <object
-      type="image/svg+xml"
-      data={poketacek_loo}
-      style={{ width: '200px' }}
-    >
-      svg-animation
-    </object>
+    <div className="content-containter--winning">
+      <object
+        type="image/svg+xml"
+        className="poketacek-animated"
+        data={poketacek_loo}
+      ></object>
+    </div>
   );
 };
 
