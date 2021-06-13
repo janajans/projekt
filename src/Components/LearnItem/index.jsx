@@ -1,4 +1,4 @@
-import React, { useState, useContext, useEffect } from 'react';
+import React, { useState, useContext } from 'react';
 import './style.css';
 import letterObjects from '../../letterObjects.js';
 import { SoundContext } from '../../Providers/SoundContext';
