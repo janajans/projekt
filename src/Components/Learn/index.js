@@ -12,7 +12,6 @@ const Learn = () => {
   useEffect(() => {
     setCurrentPosition(history.length - 1);
   }, [history]);
-  console.log(history, currentPosition);
 
   return (
     <>
