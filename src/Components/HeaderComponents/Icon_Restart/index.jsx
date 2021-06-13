@@ -6,7 +6,7 @@ const Icon_Restart = () => (
   <>
     <div className="wrapper">
       <img
-        className="header-icon"
+        className="header-icon header-icon--restart"
         src={icon_restart}
         alt="icon of restart"
         onClick={() => {
