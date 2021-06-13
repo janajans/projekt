@@ -3,10 +3,11 @@ import { Target } from './Target/Target';
 import { Option } from './Option/Option';
 import { randomIndexesGenerator } from '../../Util/randomIndexGenerator';
 import { ProgressBar } from '../ProgressBar';
+import WinningPage from '../WinningPage';
 import { options } from './Target/Target';
 
 const initRandomInd = randomIndexesGenerator(3);
-let numberOfLevels = 10;
+let numberOfLevels = 4;
 
 export const Container = () => {
   const [arrayOfIndexes, setArrayOfIndexes] = useState(initRandomInd);
@@ -44,28 +45,32 @@ export const Container = () => {
     setTimeout(() => setIsSuccess(options.default), 500);
   };
 
-  return (
-    <div className="container-content--dnd">
-      <ProgressBar
-        numberOfLevels={numberOfLevels}
-        currentLevel={currentLevel}
-        key={currentLevel}
-      />
+  if (currentLevel <= numberOfLevels) {
+    return (
+      <div className="container-content--dnd">
+        <ProgressBar
+          numberOfLevels={numberOfLevels}
+          currentLevel={currentLevel}
+          key={currentLevel}
+        />
 
-      <Target
-        key={indexValid}
-        onDrop={dropHandler}
-        index={indexValid}
-        success={isSuccess}
-      />
+        <Target
+          key={indexValid}
+          onDrop={dropHandler}
+          index={indexValid}
+          success={isSuccess}
+        />
 
-      <div className="options-container">
-        {shuffledIndexes.map((index) => (
-          <div key={index} className="option-container">
-            <Option index={index} />
-          </div>
-        ))}
+        <div className="options-container">
+          {shuffledIndexes.map((index) => (
+            <div key={index} className="option-container">
+              <Option index={index} />
+            </div>
+          ))}
+        </div>
       </div>
-    </div>
-  );
+    );
+  } else {
+    return <WinningPage />;
+  }
 };

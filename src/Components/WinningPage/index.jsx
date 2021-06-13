@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { SoundContext } from '../../Providers/SoundContext';
 import poketacek_loo from './img/poketacek_loo.svg';
 import './style.css';
