@@ -156,13 +156,7 @@
 
   .pexeso-images,
   .pexeso-letters {
-<<<<<<< HEAD
-    /* max-height: none; */
-    width: 60vw;
-    max-width: 700px;
-=======
     height: 50%;
->>>>>>> 831a7b13086eb445136dba5452e179beef0e586f
     display: flex;
     flex-direction: row;
   }

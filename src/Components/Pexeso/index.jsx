@@ -66,19 +66,13 @@ const Pexeso = () => {
     }
   }, [selectedLetter, selectedImage]);
 
-  // let audioApplause = new Audio('../../assets/sounds/applause.mp3');
   useEffect(() => {
-    // if (soundOn && correctPairs.length === 3) {
-    //   audioApplause.play();
-    // }
     if (correctPairs.length === 3) {
       setCurrentLevel(currentLevel + 1);
-      setTimeout(() => {
-        const newRandomIndexes = randomIndexesGenerator(3);
-        setRandomIndexes(newRandomIndexes);
-        setShufledIndexes(shuffle(newRandomIndexes));
-        setCorrectPairs([]);
-      }, 1000);
+      const newRandomIndexes = randomIndexesGenerator(3);
+      setRandomIndexes(newRandomIndexes);
+      setShufledIndexes(shuffle(newRandomIndexes));
+      setCorrectPairs([]);
     }
   }, [correctPairs]);
 
