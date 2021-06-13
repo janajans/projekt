@@ -1,18 +1,19 @@
 footer {
   background-color: rgb(225, 225, 225);
   height: 5vh;
+  line-height: 5vh;
+  text-align: end;
   width: 100%;
-  font-size: 0.75rem;
   color: #242422;
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
-  padding: 0 0.5rem;
+  padding: 0 2rem;
   margin: auto 0;
+  font-size: 0.8rem;
 }
 
 .footer-container {
   display: inline-block;
+  vertical-align: middle;
+  line-height: normal;
 }
 
 a {
@@ -21,9 +22,8 @@ a {
   color: #242422;
 }
 
-@media screen and (min-width: 650px) {
+@media screen and (min-width: 400px) {
   footer {
-    padding: 0 1rem;
     font-size: 1rem;
   }
 }
