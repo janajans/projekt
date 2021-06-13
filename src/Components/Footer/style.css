@@ -1,9 +1,8 @@
 footer {
-  /*   height: calc(var(--vh, 1vh) * 5);
- */
+  background-color: rgb(225, 225, 225);
   height: 5vh;
+  width: 100%;
   font-size: 0.75rem;
-
   color: #242422;
   display: flex;
   justify-content: flex-end;
@@ -24,8 +23,6 @@ a {
 
 @media screen and (min-width: 650px) {
   footer {
-    height: 6vh;
-    width: 100%;
     padding: 0 1rem;
     font-size: 1rem;
   }
