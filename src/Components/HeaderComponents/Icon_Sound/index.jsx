@@ -8,7 +8,7 @@ const Icon_Sound = ({ onClick, on }) => {
     return (
       <div className="wrapper">
         <img
-          className="header-icon"
+          className="header-icon header-icon--sound-on"
           src={icon_sound}
           alt="icon of sound on"
           onClick={onClick}
@@ -19,7 +19,7 @@ const Icon_Sound = ({ onClick, on }) => {
     return (
       <div className="wrapper">
         <img
-          className="header-icon"
+          className="header-icon header-icon--sound-off"
           src={icon_sound_off}
           alt="icon of sound off"
           onClick={onClick}

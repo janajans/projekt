@@ -1,6 +1,6 @@
 import React, { useContext } from 'react';
 /* import icon_poketacek from './img/poketacek-prozatimni.png';
- */ import icon_poketacek from './img/poketacek-loo.svg';
+ */ import icon_poketacek from './img/icon_header_poketak.svg';
 
 import SoundProvider, { SoundContext } from '../../../Providers/SoundContext';
 import { useLocation } from 'react-router-dom';
@@ -32,7 +32,7 @@ const Icon_Poketacek = () => {
   return (
     <div className="wrapper">
       <img
-        className="header-icon"
+        className="header-icon header-icon--poketacek"
         src={icon_poketacek}
         alt="mascot Poketacek"
         onClick={() => {

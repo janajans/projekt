@@ -7,7 +7,11 @@ const Icon_Home = () => (
   <>
     <Link to="/" className="header-link-container">
       <div className="wrapper">
-        <img className="header-icon" src={icon_home} alt="home icon" />
+        <img
+          className="header-icon header-icon--home"
+          src={icon_home}
+          alt="home icon"
+        />
       </div>
     </Link>
   </>
