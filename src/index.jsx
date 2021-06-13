@@ -12,6 +12,7 @@ import Header from './Components/HeaderComponents/Header';
 import Pexeso from './Components/Pexeso';
 import Play from './Components/Play';
 import Learn from './Components/Learn';
+import WinningPage from './Components/WinningPage';
 
 window.addEventListener('resize', () => {
   let vh = window.innerHeight * 0.01;
@@ -34,6 +35,9 @@ const App = () => (
         </Route>
         <Route path="/pexeso">
           <Pexeso />
+        </Route>
+        <Route path="/winning">
+          <WinningPage />
         </Route>
         <Route path="/">
           <Home />
