@@ -37,7 +37,6 @@ export const Container = () => {
   const dropHandler = (itemIndex) => {
     if (indexValid !== itemIndex) {
       setIsSuccess(options.unsuccess);
-      console.log('currentLevel: ', currentLevel);
     } else {
       setIsSuccess(options.success);
       setCurrentLevel(currentLevel + 1);
