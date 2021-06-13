@@ -7,7 +7,7 @@ import WinningPage from '../WinningPage';
 import { options } from './Target/Target';
 
 const initRandomInd = randomIndexesGenerator(3);
-let numberOfLevels = 4;
+let numberOfLevels = 5;
 
 export const Container = () => {
   const [arrayOfIndexes, setArrayOfIndexes] = useState(initRandomInd);
@@ -51,7 +51,6 @@ export const Container = () => {
         <ProgressBar
           numberOfLevels={numberOfLevels}
           currentLevel={currentLevel}
-          key={currentLevel}
         />
 
         <Target
