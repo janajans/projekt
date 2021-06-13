@@ -10,15 +10,20 @@ const WinningPage = () => {
   if (soundOn) {
     audioApplause.play();
   }
+  setTimeout(() => {
+    window.location.reload();
+  }, 5000);
 
   return (
-    <object
-      type="image/svg+xml"
-      data={poketacek_loo}
-      style={{ width: '200px' }}
-    >
-      svg-animation
-    </object>
+    <div className="container-content--winning">
+      <object
+        type="image/svg+xml"
+        data={poketacek_loo}
+        style={{ width: '200px' }}
+      >
+        svg-animation
+      </object>
+    </div>
   );
 };
 

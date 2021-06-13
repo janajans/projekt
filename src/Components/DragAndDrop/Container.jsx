@@ -45,7 +45,7 @@ export const Container = () => {
     setTimeout(() => setIsSuccess(options.default), 500);
   };
 
-  if (currentLevel <= numberOfLevels) {
+  if (currentLevel < numberOfLevels) {
     return (
       <div className="container-content--dnd">
         <ProgressBar
