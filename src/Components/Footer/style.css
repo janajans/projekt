@@ -1,29 +1,25 @@
 footer {
   background-color: rgb(225, 225, 225);
   height: 5vh;
+  max-height: 7vw;
   width: 100%;
-  font-size: 0.75rem;
+  font-size: 90%;
   color: #242422;
   display: flex;
   justify-content: flex-end;
   align-items: center;
   padding: 0 0.5rem;
   margin: auto 0;
+  overflow: auto;
 }
 
 .footer-container {
   display: inline-block;
+  max-width: 100%;
 }
 
 a {
   text-decoration: none;
   font-weight: bold;
   color: #242422;
-}
-
-@media screen and (min-width: 650px) {
-  footer {
-    padding: 0 1rem;
-    font-size: 1rem;
-  }
 }
