@@ -1,5 +1,5 @@
 header {
-  height: 7vh;
+  height: 10vh;
   width: 100vw;
   display: flex;
   justify-content: space-between;
@@ -20,6 +20,11 @@ header {
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+}
+
+.wrapper,
+.header-icon {
+  margin: 0 0.2vw;
 }
 
 .header-icon {
@@ -85,7 +90,6 @@ header {
   header {
     justify-content: space-between;
     align-content: center;
-    height: 10vh;
     padding: 0 1rem;
   }
 
