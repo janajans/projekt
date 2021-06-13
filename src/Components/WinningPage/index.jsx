@@ -10,6 +10,9 @@ const WinningPage = () => {
   if (soundOn) {
     audioApplause.play();
   }
+  setTimeout(() => {
+    window.location.reload();
+  }, 5000);
 
   return (
     <div className="content-containter--winning">
